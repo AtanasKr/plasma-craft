@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e8e8e8;
+}
+
+/* Nav container */
+nav.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    margin: 5em 20% 0 20%;
+    border-radius: 2.5em;
+    height: 8em;
+    position: relative;
+    padding: 0 3em;
+    filter: drop-shadow(0 0.3em 0.5em rgba(0, 0, 0, 0.2));
+}
+
+/* Logo overlaps nav in center */
+nav.nav img {
+    height: 12em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 7em;
+    z-index: 2;
+}
+
+/* Nav links */
+.nav-pill {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #333;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+
+.nav-pill:hover,
+.nav-pill.active {
+    background-color: #000000;
+    color: white;
+}
+
+/* ── Side Controls ── */
+.nav-side {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    z-index: 3;
+}
+
+.nav-side-left {
+    left: -4.5em;
+}
+
+.nav-side-right {
+    right: -4.5em;
+}
+
+/* Language switcher */
+.lang-switch {
+    display: flex;
+    gap: 0.3em;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #555;
+}
+
+.lang-switch span {
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.lang-switch span.active-lang {
+    background: #000;
+    color: #fff;
+}
+
+.lang-switch span:hover:not(.active-lang) {
+    background: #ddd;
+}
+
+/* Theme toggle */
+.theme-toggle {
+    background: #e0e0e0;
+    border: none;
+    border-radius: 50%;
+    width: 2.4em;
+    height: 2.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle:hover {
+    background: #ccc;
+}
+
+/* Dark mode */
+[data-theme="dark"] body {
+    background: #1a1a1a;
+}
+
+[data-theme="dark"] nav.nav {
+    background-color: #2a2a2a;
+    filter: drop-shadow(0 0.3em 0.5em rgba(0, 0, 0, 0.5));
+}
+
+[data-theme="dark"] .nav-pill {
+    color: #ccc;
+}
+
+[data-theme="dark"] .nav-pill:hover,
+[data-theme="dark"] .nav-pill.active {
+    background-color: #ffffff;
+    color: #000;
+}
+
+[data-theme="dark"] .lang-switch {
+    color: #aaa;
+}
+
+[data-theme="dark"] .lang-switch span.active-lang {
+    background: #fff;
+    color: #000;
+}
+
+[data-theme="dark"] .lang-switch span:hover:not(.active-lang) {
+    background: #444;
+}
+
+[data-theme="dark"] .theme-toggle {
+    background: #444;
+    color: #fff;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background: #555;
+}
+
+[data-i18n] {
+    visibility: hidden;
+}
