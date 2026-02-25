@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlasmaCraft BG</title>
-     <script>
-        (function() {
+    <script>
+        (function () {
             const theme = localStorage.getItem('theme') || 'light';
-            const lang  = localStorage.getItem('lang')  || 'bg';
+            const lang = localStorage.getItem('lang') || 'bg';
             document.documentElement.setAttribute('data-theme', theme);
             document.documentElement.setAttribute('lang', lang);
         })();
     </script>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/index.css">
 </head>
 
 <body>
@@ -29,7 +30,7 @@
         </div>
 
         <div class="nav-left">
-            <a class="nav-pill active" href="/" data-i18n="nav.home">Начало</a>
+            <a class="nav-pill active" href="./index.html" data-i18n="nav.home">Начало</a>
             <a class="nav-pill" href="./services.html" data-i18n="nav.services">Услуги</a>
         </div>
 
@@ -37,7 +38,7 @@
 
         <div class="nav-right">
             <a class="nav-pill" href="./about.html" data-i18n="nav.about">За нас</a>
-            <a class="nav-pill" href="/Contact.html" data-i18n="nav.contact">Контакти</a>
+            <a class="nav-pill" href="./contact.html" data-i18n="nav.contact">Контакти</a>
         </div>
 
         <!-- Theme toggle -->
@@ -46,6 +47,36 @@
         </div>
 
     </nav>
+    <main class="main-content">
+        <section class="two-column">
+            <div class="column text-column">
+                <p class="pointer-text">
+                    <span class="line"></span>
+                    Прецизно метално изкуство
+                </p>
+                <p class="slogan-info">
+                    ИЗКОВАНО<br>
+                    ОТ <span class="outline-text">ОГЪН</span><br>
+                    И<br>
+                    СТОМАНА
+                </p>
+                <p>
+                    Изрязване с ЦНК плазма за стенно<br>
+                    изкуство, надписи, декоративни панели и<br>
+                    промишлено производство. Всеки разрез<br>
+                    разказва история.
+                </p>
+                <div class="project-order">
+                    <a href="#" class="project-order-link">ПОРЪЧАЙ ПО ПРОЕКТ</a>
+                </div>
+            </div>
+
+            <div class="column image-column">
+                <img src="assets/tree-front.png" alt="Plasma cutting machine">
+                <button>ВИЖ НАШАТА РАБОТА</button>
+            </div>
+        </section>
+    </main>
     <script src="scripts/script.js"></script>
 </body>
 

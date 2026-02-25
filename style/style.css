@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #e8e8e8;
+    background: #f7f7f7;
 }
 
 /* Nav container */
@@ -10,9 +10,9 @@ nav.nav {
     align-items: center;
     justify-content: space-between;
     background-color: #f0f0f0;
-    margin: 5em 20% 0 20%;
+    margin: 4em 20% 0 20%;
     border-radius: 2.5em;
-    height: 8em;
+    height: 5.9em;
     position: relative;
     padding: 0 3em;
     filter: drop-shadow(0 0.3em 0.5em rgba(0, 0, 0, 0.2));
@@ -20,7 +20,7 @@ nav.nav {
 
 /* Logo overlaps nav in center */
 nav.nav img {
-    height: 12em;
+    height: 10em;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -41,7 +41,7 @@ nav.nav img {
     padding: 10px 15px;
     color: #333;
     border-radius: 5px;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .nav-pill:hover,
