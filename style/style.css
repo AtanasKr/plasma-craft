@@ -31,7 +31,7 @@ nav.nav img {
 .nav-left,
 .nav-right {
     display: flex;
-    gap: 7em;
+    gap: 8em;
     z-index: 2;
 }
 
