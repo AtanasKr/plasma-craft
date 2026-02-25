@@ -78,6 +78,16 @@
     transform: translateX(6px);
 }
 
+.view-work-button {
+    margin-left: 7em;
+    margin-right: 7em;
+    padding: 1em;
+    border: none;
+    border-radius: 1em;
+    background-color: #e4e4e4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
 /* Responsive (mobile) */
 @media (max-width: 768px) {
     .two-column {
