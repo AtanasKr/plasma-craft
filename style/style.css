@@ -113,6 +113,81 @@ nav.nav img {
     background: #ccc;
 }
 
+/* Hamburger button — hidden on desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4em;
+    z-index: 10;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #333;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animate to X when open */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile dropdown menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f0f0f0;
+    margin: 0.5rem 1rem 0;
+    border-radius: 1.5rem;
+    padding: 1.5rem 1rem;
+    filter: drop-shadow(0 0.3em 0.5em rgba(0, 0, 0, 0.15));
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-menu.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.mobile-menu .nav-pill {
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    width: 100%;
+    justify-content: center;
+}
+
 /* Dark mode */
 [data-theme="dark"] body {
     background: #1a1a1a;
@@ -155,6 +230,54 @@ nav.nav img {
     background: #555;
 }
 
+[data-theme="dark"] .mobile-menu {
+    background: #2a2a2a;
+}
+
+[data-theme="dark"] .hamburger span {
+    background: #ccc;
+}
+
+[data-theme="dark"] .mobile-menu-controls {
+    border-top-color: rgba(255,255,255,0.1);
+}
+
 [data-i18n] {
     visibility: hidden;
+}
+
+/* ───────── MOBILE NAV ───────── */
+@media (max-width: 768px) {
+
+    nav.nav {
+        margin: 1.5rem 1rem;
+        padding: 0 1.2rem;
+        height: 4rem;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        border-radius: 1.5rem;
+    }
+
+    /* Hide desktop links and side controls */
+    .nav-left,
+    .nav-right,
+    .nav-side {
+        display: none;
+    }
+
+    /* Logo stays centered */
+    nav.nav img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 5rem;
+        z-index: 1;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+    }
 }

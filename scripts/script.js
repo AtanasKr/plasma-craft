@@ -72,3 +72,10 @@ function toggleTheme() {
     applyLang(lang);
     document.getElementById('themeBtn').textContent = theme === 'dark' ? '☀️' : '🌙';
 })();
+
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.getElementById('hamburgerBtn');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+}

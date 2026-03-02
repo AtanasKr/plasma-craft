@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&display=swap');
+
+/* ── Fade-in animations ── */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lineGrow {
+    from { width: 0; }
+    to   { width: 40px; }
+}
+
+/* ── Layout ── */
 .main-content {
-    padding: 2.2rem 2rem;
+    padding: 3rem 2rem;
 }
 
 .two-column {
@@ -7,96 +21,271 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
+}
+
+/* ── Image column ── */
+.image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeUp 0.9s ease 0.2s both;
 }
 
 .column img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 4px;
+    filter: drop-shadow(0 8px 32px rgba(0,0,0,0.18));
+    transition: filter 0.4s ease;
 }
 
-.slogan-info {
-    margin-top: 0;
-    font-size: 5em;
-    font-weight: bold;
+.column img:hover {
+    filter: drop-shadow(0 12px 48px rgba(0,0,0,0.28));
 }
 
-.outline-text {
-    color: white;
-    -webkit-text-stroke: 2px black;
-    text-stroke: 2px black;
-}
-
-.image-column {
-    display: flex;
-    flex-direction: column;
-}
-
+/* ── Text column ── */
 .text-column {
-    font-weight: 550;
+    color: #111;
+    animation: fadeUp 0.9s ease 0s both;
 }
 
+/* ── Tagline ── */
 .pointer-text {
-    margin-top: 4.3em;
+    margin-top: 0;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
+    font-family: 'Barlow', sans-serif;
     font-weight: 500;
-    letter-spacing: 0.05em;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
+    color: #888;
+    animation: fadeUp 0.7s ease 0.1s both;
 }
 
 .pointer-text .line {
     width: 40px;
-    height: 2px;
-    background-color: #000;
+    height: 1.5px;
+    background-color: #bbb;
     flex-shrink: 0;
+    animation: lineGrow 0.6s ease 0.3s both;
+}
+
+/* ── Slogan ── */
+.slogan-info {
+    margin: 0.3em 0 0.5em;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 6em;
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    color: #111;
+    animation: fadeUp 0.8s ease 0.15s both;
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px #111;
+    text-stroke: 2px #111;
+}
+
+/* ── Description ── */
+.text-column > p:not(.pointer-text):not(.slogan-info) {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 1.2em;
+    animation: fadeUp 0.8s ease 0.25s both;
+}
+
+/* ── CTA ── */
+.project-order {
+    margin-top: 2.2em;
+    animation: fadeUp 0.8s ease 0.35s both;
 }
 
 .project-order-link {
-    margin-top: 2em;
     position: relative;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.82rem;
     font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     text-decoration: none;
-    color: inherit;
+    color: #111;
+    padding-bottom: 4px;
 }
 
-/* Arrow */
+.project-order-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: #111;
+    transition: width 0.3s ease;
+}
+
+.project-order-link:hover::before {
+    width: 100%;
+}
+
 .project-order-link::after {
     content: "→";
-    font-size: 1.2em;
+    font-size: 1.1em;
     transition: transform 0.25s ease;
 }
 
-/* Subtle hover movement */
 .project-order-link:hover::after {
     transform: translateX(6px);
 }
 
+/* ── View work button ── */
 .view-work-button {
-    margin-left: 7em;
-    margin-right: 7em;
-    padding: 1em;
-    border: none;
-    border-radius: 1em;
-    background-color: #e4e4e4;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding: 1em 2em;
+    border: 1.5px solid #ddd;
+    border-radius: 4px;
+    background: transparent;
+    color: #333;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
 }
 
-/* Responsive (mobile) */
+.view-work-button:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+/* ════════════════════════════
+   DARK MODE
+════════════════════════════ */
+
+[data-theme="dark"] .text-column {
+    color: #e8e8e8;
+}
+
+[data-theme="dark"] .pointer-text {
+    color: #666;
+}
+
+[data-theme="dark"] .pointer-text .line {
+    background-color: #ff6a00;
+}
+
+[data-theme="dark"] .slogan-info {
+    color: #f0ece4;
+}
+
+[data-theme="dark"] .outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px #ff6a00;
+    text-stroke: 2px #ff6a00;
+    text-shadow:
+        0 0 20px rgba(255, 106, 0, 0.5),
+        0 0 60px rgba(255, 60, 0, 0.25);
+}
+
+[data-theme="dark"] .text-column > p:not(.pointer-text):not(.slogan-info) {
+    color: #888;
+}
+
+[data-theme="dark"] .project-order-link {
+    color: #e8e8e8;
+}
+
+[data-theme="dark"] .project-order-link::before {
+    background: #ff6a00;
+}
+
+[data-theme="dark"] .project-order-link:hover {
+    color: #ff6a00;
+}
+
+[data-theme="dark"] .view-work-button {
+    border-color: #333;
+    color: #aaa;
+    background: transparent;
+}
+
+[data-theme="dark"] .view-work-button:hover {
+    background: #ff6a00;
+    color: #fff;
+    border-color: #ff6a00;
+}
+
+[data-theme="dark"] .column img {
+    filter: drop-shadow(0 8px 40px rgba(255, 106, 0, 0.12));
+}
+
+[data-theme="dark"] .column img:hover {
+    filter: drop-shadow(0 12px 60px rgba(255, 106, 0, 0.22));
+}
+
+/* ════════════════════════════
+   MOBILE
+════════════════════════════ */
 @media (max-width: 768px) {
+    .main-content {
+        padding: 1.5rem 1rem;
+    }
+
     .two-column {
         grid-template-columns: 1fr;
+        gap: 2rem;
         text-align: center;
     }
 
     .image-column {
         order: -1;
-        /* image on top on mobile */
+        align-items: center;
+    }
+
+    .image-column img {
+        max-width: 90%;
+    }
+
+    .pointer-text {
+        margin-top: 1.5rem;
+        justify-content: center;
+    }
+
+    .slogan-info {
+        font-size: 3.2rem;
+        line-height: 1;
+    }
+
+    .text-column {
+        text-align: center;
+    }
+
+    .project-order {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .view-work-button {
+        margin: 1.5rem 0 0 0;
+        width: 100%;
+        max-width: 280px;
     }
 }

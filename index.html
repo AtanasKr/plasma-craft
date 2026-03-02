@@ -46,7 +46,30 @@
             <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
         </div>
 
+        <!-- Hamburger button (mobile only) -->
+        <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
     </nav>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a class="nav-pill active" href="./index.html" data-i18n="nav.home">Начало</a>
+        <a class="nav-pill" href="./services.html" data-i18n="nav.services">Услуги</a>
+        <a class="nav-pill" href="./about.html" data-i18n="nav.about">За нас</a>
+        <a class="nav-pill" href="./contact.html" data-i18n="nav.contact">Контакти</a>
+        <div class="mobile-menu-controls">
+            <div class="lang-switch">
+                <span data-lang="bg" onclick="setLang('bg')">BG</span>
+                <span data-lang="en" onclick="setLang('en')">EN</span>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+    </div>
+
     <main class="main-content">
         <section class="two-column">
             <div class="column text-column">
