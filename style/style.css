@@ -315,9 +315,9 @@ nav.nav img {
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 2rem 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
 }
 
 .footer-heading {
