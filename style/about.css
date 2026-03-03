@@ -1,0 +1,125 @@
+/* ── About page header ── */
+.about-page-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e8e8e8;
+    animation: fadeUp 0.7s ease both;
+}
+
+/* ── Mission / Vision / Goals ── */
+.mvg-section {
+    margin-bottom: 3.5rem;
+    scroll-margin-top: 2rem;
+    animation: fadeUp 0.8s ease 0.05s both;
+}
+
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #111;
+    margin: 0 0 1.5rem;
+    line-height: 1;
+}
+
+.mvg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.mvg-card {
+    background: #f2f2f2;
+    border-radius: 10px;
+    padding: 1.8rem 1.6rem;
+    border-top: 3px solid #111;
+}
+
+.mvg-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+    color: #111;
+    margin-bottom: 0.8rem;
+}
+
+.mvg-card p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #555;
+    margin: 0;
+}
+
+/* ── Content sections ── */
+.about-section {
+    margin-bottom: 3.5rem;
+    scroll-margin-top: 2rem;
+    animation: fadeUp 0.8s ease 0.1s both;
+}
+
+.section-text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.85;
+    color: #555;
+    margin: 0;
+    max-width: 740px;
+}
+
+/* ── Timeline ── */
+.timeline {
+    border-left: 2px solid #e0e0e0;
+    padding-left: 1.8rem;
+    margin-left: 0.5rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-dot {
+    position: absolute;
+    left: -2.15rem;
+    top: 0.4rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff6a00;
+    border: 2px solid #f7f7f7;
+    box-shadow: 0 0 0 2px #ff6a00;
+}
+
+.timeline-item p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+
+/* ── Dark mode ── */
+[data-theme="dark"] .about-page-header { border-bottom-color: #2a2a2a; }
+[data-theme="dark"] .section-title { color: #f0ece4; }
+[data-theme="dark"] .mvg-card { background: #1e1e1e; border-top-color: #ff6a00; }
+[data-theme="dark"] .mvg-label { color: #f0ece4; }
+[data-theme="dark"] .mvg-card p { color: #888; }
+[data-theme="dark"] .section-text { color: #888; }
+[data-theme="dark"] .timeline { border-left-color: #2a2a2a; }
+[data-theme="dark"] .timeline-dot { border-color: #1a1a1a; }
+[data-theme="dark"] .timeline-item p { color: #888; }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .about-page-header { margin-bottom: 2rem; padding-bottom: 1.5rem; }
+    .section-title { font-size: 2rem; }
+    .mvg-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .about-section { margin-bottom: 2.5rem; }
+}

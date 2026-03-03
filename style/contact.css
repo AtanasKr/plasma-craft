@@ -1,0 +1,139 @@
+/* ── Contact page header ── */
+.contact-page-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e8e8e8;
+    animation: fadeUp 0.7s ease both;
+}
+
+/* ── Contact sections ── */
+.contact-section {
+    margin-bottom: 2.8rem;
+    scroll-margin-top: 2rem;
+    animation: fadeUp 0.7s ease both;
+}
+
+.contact-section:last-child { margin-bottom: 0; }
+
+.contact-section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.06em;
+    color: #111;
+    margin: 0 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.contact-section-title::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 1.1rem;
+    background: #ff6a00;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+/* ── Entries (phone / email / address) ── */
+.contact-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-entry {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+}
+
+.entry-role {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #bbb;
+    flex-shrink: 0;
+    min-width: 4rem;
+}
+
+.entry-value {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    text-decoration: none;
+    line-height: 1.6;
+    transition: color 0.2s;
+}
+
+a.entry-value:hover { color: #ff6a00; }
+
+/* ── Hours ── */
+.hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.hours-list li {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: #555;
+    line-height: 1.6;
+}
+
+.hours-list li.closed { color: #bbb; }
+
+/* ── Social icons in contact ── */
+.social-row {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+}
+
+/* .social-link is defined in style.css — only overriding border/color for light bg */
+.contact-section .social-link {
+    border-color: #ccc;
+    color: #666;
+}
+
+.contact-section .social-link:hover {
+    border-color: #ff6a00;
+    color: #ff6a00;
+}
+
+/* ── Map ── */
+.map-container {
+    width: 100%;
+    height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    margin-top: 0.6rem;
+}
+
+.map-container iframe { display: block; }
+
+/* ── Dark mode ── */
+[data-theme="dark"] .contact-page-header { border-bottom-color: #2a2a2a; }
+[data-theme="dark"] .contact-section-title { color: #f0ece4; }
+[data-theme="dark"] .entry-role { color: #555; }
+[data-theme="dark"] .entry-value { color: #ccc; }
+[data-theme="dark"] .hours-list li { color: #888; }
+[data-theme="dark"] .hours-list li.closed { color: #444; }
+[data-theme="dark"] .contact-section .social-link { border-color: #333; color: #666; }
+[data-theme="dark"] .map-container { border-color: #2a2a2a; }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+    .contact-page-header { margin-bottom: 2rem; padding-bottom: 1.5rem; }
+    .map-container { height: 280px; }
+}

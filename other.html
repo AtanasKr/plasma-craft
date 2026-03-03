@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PlasmaCraft BG – Other Products: fire pits, illuminated signs, hammocks and more.">
+    <title>PlasmaCraft BG – Други продукти / Other Products</title>
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'light';
+            const lang = localStorage.getItem('lang') || 'bg';
+            document.documentElement.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('lang', lang);
+        })();
+    </script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/products.css">
+</head>
+
+<body>
+
+    <!-- ══ NAV ══ -->
+    <nav class="nav">
+        <div class="nav-side nav-side-left">
+            <div class="lang-switch">
+                <span data-lang="bg" onclick="setLang('bg')">BG</span>
+                <span data-lang="en" onclick="setLang('en')">EN</span>
+            </div>
+        </div>
+
+        <div class="nav-left">
+            <a class="nav-pill" href="./index.html" data-i18n="nav.services">Услуги</a>
+            <div class="nav-dropdown">
+                <span class="nav-pill dropdown-trigger active" data-i18n="nav.products">Продукти</span>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./railings.html" data-i18n="products.railings">Парапети</a>
+                    <a class="dropdown-item" href="./doors.html"    data-i18n="products.doors">Врати</a>
+                    <a class="dropdown-item" href="./fences.html"   data-i18n="products.fences">Огради</a>
+                    <a class="dropdown-item" href="./fitness.html"  data-i18n="products.fitness">Фитнес машини</a>
+                    <a class="dropdown-item" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
+                    <a class="dropdown-item active" href="./other.html" data-i18n="products.other">Други продукти</a>
+                </div>
+            </div>
+        </div>
+
+        <img src="assets/logo.png" alt="PlasmaCraft BG logo">
+
+        <div class="nav-right">
+            <a class="nav-pill" href="./about.html"   data-i18n="nav.about">За нас</a>
+            <a class="nav-pill" href="./contact.html" data-i18n="nav.contact">Контакти</a>
+        </div>
+
+        <div class="nav-side nav-side-right">
+            <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
+        </div>
+
+        <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a class="nav-pill" href="./index.html" data-i18n="nav.services">Услуги</a>
+        <div class="mobile-products-group">
+            <div class="mobile-products-label" data-i18n="nav.products">Продукти</div>
+            <div class="mobile-products-links">
+                <a class="nav-pill-sm" href="./railings.html"   data-i18n="products.railings">Парапети</a>
+                <a class="nav-pill-sm" href="./doors.html"      data-i18n="products.doors">Врати</a>
+                <a class="nav-pill-sm" href="./fences.html"     data-i18n="products.fences">Огради</a>
+                <a class="nav-pill-sm" href="./fitness.html"    data-i18n="products.fitness">Фитнес машини</a>
+                <a class="nav-pill-sm" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
+                <a class="nav-pill-sm active" href="./other.html" data-i18n="products.other">Други продукти</a>
+            </div>
+        </div>
+        <a class="nav-pill" href="./about.html"   data-i18n="nav.about">За нас</a>
+        <a class="nav-pill" href="./contact.html" data-i18n="nav.contact">Контакти</a>
+        <div class="mobile-menu-controls">
+            <div class="lang-switch">
+                <span data-lang="bg" onclick="setLang('bg')">BG</span>
+                <span data-lang="en" onclick="setLang('en')">EN</span>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+    </div>
+
+    <!-- ══ PAGE LAYOUT ══ -->
+    <div class="page-layout">
+
+        <aside class="page-sidebar">
+            <h2 class="sidebar-heading" data-i18n="products.other">Други продукти</h2>
+            <nav class="sidebar-nav">
+                <a href="#firepits"  class="sidebar-link" data-i18n="other.firepits.title">Огнища</a>
+                <a href="#signs"     class="sidebar-link" data-i18n="other.signs.title">Светещи надписи</a>
+                <a href="#hammocks"  class="sidebar-link" data-i18n="other.hammocks.title">Хамаци</a>
+            </nav>
+        </aside>
+
+        <main class="page-content">
+
+            <header class="products-page-header">
+                <p class="pointer-text"><span class="line"></span><span data-i18n="products.other">Други продукти</span></p>
+                <h1 class="page-title" data-i18n="other.pageTitle">ДРУГИ ПРОДУКТИ</h1>
+            </header>
+
+            <!-- Fire Pits -->
+            <section id="firepits" class="other-section">
+                <h2 class="other-section-title" data-i18n="other.firepits.title">Огнища</h2>
+                <p class="other-section-desc" data-i18n="other.firepits.desc">Декоративни и функционални огнища, изработени от метал с плазмено рязане. Уникални дизайни по поръчка — идеални за градина, тераса или зона за отдих.</p>
+                <div class="product-gallery-grid">
+                    <div class="gallery-item"
+                         onclick="openProductModal(this)"
+                         data-key-title="other.firepits.p1.name"
+                         data-key-desc="other.firepits.p1.desc"
+                         data-images=""
+                         style="cursor:pointer;">
+                        <div class="product-placeholder">🔥</div>
+                    </div>
+                    <div class="gallery-item"
+                         onclick="openProductModal(this)"
+                         data-key-title="other.firepits.p2.name"
+                         data-key-desc="other.firepits.p2.desc"
+                         data-images=""
+                         style="cursor:pointer;">
+                        <div class="product-placeholder">🔥</div>
+                    </div>
+                    <div class="gallery-item"
+                         onclick="openProductModal(this)"
+                         data-key-title="other.firepits.p3.name"
+                         data-key-desc="other.firepits.p3.desc"
+                         data-images=""
+                         style="cursor:pointer;">
+                        <div class="product-placeholder">🔥</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Illuminated Signs -->
+            <section id="signs" class="other-section">
+                <h2 class="other-section-title" data-i18n="other.signs.title">Светещи надписи</h2>
+                <p class="other-section-desc" data-i18n="other.signs.desc">Персонализирани светещи метални надписи и табели с LED осветление. Подходящи за бизнес, реклама и интериорна декорация. Изработват се по предоставен дизайн или съвместно разработен от нашия екип.</p>
+                <div class="product-gallery-grid">
+                    <div class="gallery-item"
+                         onclick="openProductModal(this)"
+                         data-key-title="other.signs.p1.name"
+                         data-key-desc="other.signs.p1.desc"
+                         data-images=""
+                         style="cursor:pointer;">
+                        <div class="product-placeholder">💡</div>
+                    </div>
+                    <div class="gallery-item"
+                         onclick="openProductModal(this)"
+                         data-key-title="other.signs.p2.name"
+                         data-key-desc="other.signs.p2.desc"
+                         data-images=""
+                         style="cursor:pointer;">
+                        <div class="product-placeholder">💡</div>
+                    </div>
+                    <div class="gallery-item"
+                         onclick="openProductModal(this)"
+                         data-key-title="other.signs.p3.name"
+                         data-key-desc="other.signs.p3.desc"
+                         data-images=""
+                         style="cursor:pointer;">
+                        <div class="product-placeholder">💡</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hammocks -->
+            <section id="hammocks" class="other-section">
+                <h2 class="other-section-title" data-i18n="other.hammocks.title">Хамаци</h2>
+                <p class="other-section-desc" data-i18n="other.hammocks.desc">Метални конструкции за хамаци, изработени от стомана с антикорозионно покритие. Стабилни, издръжливи и елегантни — подходящи за вътрешно и външно използване.</p>
+                <div class="product-gallery-grid">
+                    <div class="gallery-item"
+                         onclick="openProductModal(this)"
+                         data-key-title="other.hammocks.p1.name"
+                         data-key-desc="other.hammocks.p1.desc"
+                         data-images=""
+                         style="cursor:pointer;">
+                        <div class="product-placeholder">🛏️</div>
+                    </div>
+                    <div class="gallery-item"
+                         onclick="openProductModal(this)"
+                         data-key-title="other.hammocks.p2.name"
+                         data-key-desc="other.hammocks.p2.desc"
+                         data-images=""
+                         style="cursor:pointer;">
+                        <div class="product-placeholder">🛏️</div>
+                    </div>
+                    <div class="gallery-item"
+                         onclick="openProductModal(this)"
+                         data-key-title="other.hammocks.p3.name"
+                         data-key-desc="other.hammocks.p3.desc"
+                         data-images=""
+                         style="cursor:pointer;">
+                        <div class="product-placeholder">🛏️</div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ══ PRODUCT MODAL ══ -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-box">
+            <button class="modal-close-btn" onclick="closeModal()">&#10005;</button>
+            <div class="modal-img-area">
+                <img id="modalMainImg" src="" alt="" style="display:none;">
+                <div class="modal-img-placeholder" id="modalImgPlaceholder">&#9851;</div>
+                <button class="modal-gallery-btn prev" id="modalPrev" onclick="galleryPrev()">&#8249;</button>
+                <button class="modal-gallery-btn next" id="modalNext" onclick="galleryNext()">&#8250;</button>
+            </div>
+            <div class="modal-thumbs-strip" id="modalThumbsStrip"></div>
+            <div class="modal-info">
+                <h3 class="modal-product-title" id="modalProductTitle"></h3>
+                <p class="modal-product-desc" id="modalProductDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.follow">Следвайте ни</h4>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">f</a>
+                    <a href="#" class="social-link" aria-label="Instagram">ig</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.contact">Контакти</h4>
+                <p class="footer-text"><a href="tel:+35900000000">+359 00 000 0000</a></p>
+                <p class="footer-text" data-i18n="contact.address.value">ул. Примерна 1, гр. София, 1000</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.sitemap">Карта на сайта</h4>
+                <nav class="footer-nav">
+                    <a href="./index.html"  data-i18n="nav.services">Услуги</a>
+                    <a href="./about.html"  data-i18n="nav.about">За нас</a>
+                    <a href="./contact.html" data-i18n="nav.contact">Контакти</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span data-i18n="footer.rights">© 2025 PlasmaCraft BG. Всички права запазени.</span>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

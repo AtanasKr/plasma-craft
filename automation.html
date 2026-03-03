@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PlasmaCraft BG – Process Automation Machines: custom industrial automation solutions.">
+    <title>PlasmaCraft BG – Автоматизация / Automation Machines</title>
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme') || 'light';
+            const lang = localStorage.getItem('lang') || 'bg';
+            document.documentElement.setAttribute('data-theme', theme);
+            document.documentElement.setAttribute('lang', lang);
+        })();
+    </script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/products.css">
+</head>
+
+<body>
+
+    <!-- ══ NAV ══ -->
+    <nav class="nav">
+        <div class="nav-side nav-side-left">
+            <div class="lang-switch">
+                <span data-lang="bg" onclick="setLang('bg')">BG</span>
+                <span data-lang="en" onclick="setLang('en')">EN</span>
+            </div>
+        </div>
+
+        <div class="nav-left">
+            <a class="nav-pill" href="./index.html" data-i18n="nav.services">Услуги</a>
+            <div class="nav-dropdown">
+                <span class="nav-pill dropdown-trigger active" data-i18n="nav.products">Продукти</span>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./railings.html" data-i18n="products.railings">Парапети</a>
+                    <a class="dropdown-item" href="./doors.html"    data-i18n="products.doors">Врати</a>
+                    <a class="dropdown-item" href="./fences.html"   data-i18n="products.fences">Огради</a>
+                    <a class="dropdown-item" href="./fitness.html"  data-i18n="products.fitness">Фитнес машини</a>
+                    <a class="dropdown-item active" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
+                    <a class="dropdown-item" href="./other.html"    data-i18n="products.other">Други продукти</a>
+                </div>
+            </div>
+        </div>
+
+        <img src="assets/logo.png" alt="PlasmaCraft BG logo">
+
+        <div class="nav-right">
+            <a class="nav-pill" href="./about.html"   data-i18n="nav.about">За нас</a>
+            <a class="nav-pill" href="./contact.html" data-i18n="nav.contact">Контакти</a>
+        </div>
+
+        <div class="nav-side nav-side-right">
+            <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
+        </div>
+
+        <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a class="nav-pill" href="./index.html" data-i18n="nav.services">Услуги</a>
+        <div class="mobile-products-group">
+            <div class="mobile-products-label" data-i18n="nav.products">Продукти</div>
+            <div class="mobile-products-links">
+                <a class="nav-pill-sm" href="./railings.html"   data-i18n="products.railings">Парапети</a>
+                <a class="nav-pill-sm" href="./doors.html"      data-i18n="products.doors">Врати</a>
+                <a class="nav-pill-sm" href="./fences.html"     data-i18n="products.fences">Огради</a>
+                <a class="nav-pill-sm" href="./fitness.html"    data-i18n="products.fitness">Фитнес машини</a>
+                <a class="nav-pill-sm active" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
+                <a class="nav-pill-sm" href="./other.html"      data-i18n="products.other">Други продукти</a>
+            </div>
+        </div>
+        <a class="nav-pill" href="./about.html"   data-i18n="nav.about">За нас</a>
+        <a class="nav-pill" href="./contact.html" data-i18n="nav.contact">Контакти</a>
+        <div class="mobile-menu-controls">
+            <div class="lang-switch">
+                <span data-lang="bg" onclick="setLang('bg')">BG</span>
+                <span data-lang="en" onclick="setLang('en')">EN</span>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+    </div>
+
+    <!-- ══ PAGE LAYOUT ══ -->
+    <div class="page-layout">
+
+        <aside class="page-sidebar">
+            <h2 class="sidebar-heading" data-i18n="products.automation">Автоматизационни машини</h2>
+            <nav class="sidebar-nav">
+                <a href="#gallery" class="sidebar-link" data-i18n="automation.gallery.label">Галерия</a>
+                <a href="#about"   class="sidebar-link" data-i18n="automation.about.label">За продуктите</a>
+            </nav>
+        </aside>
+
+        <main class="page-content">
+
+            <header class="products-page-header">
+                <p class="pointer-text"><span class="line"></span><span data-i18n="products.automation">Автоматизационни машини</span></p>
+                <h1 class="page-title" data-i18n="automation.pageTitle">АВТОМАТИЗАЦИОННИ МАШИНИ</h1>
+            </header>
+
+            <!-- Gallery -->
+            <section id="gallery" class="product-group">
+                <h2 class="product-group-title" data-i18n="automation.gallery.label">Галерия</h2>
+                <div class="product-gallery-grid">
+                    <div class="gallery-item"><div class="product-placeholder">⚙️</div></div>
+                    <div class="gallery-item"><div class="product-placeholder">⚙️</div></div>
+                    <div class="gallery-item"><div class="product-placeholder">⚙️</div></div>
+                    <div class="gallery-item"><div class="product-placeholder">⚙️</div></div>
+                    <div class="gallery-item"><div class="product-placeholder">⚙️</div></div>
+                    <div class="gallery-item"><div class="product-placeholder">⚙️</div></div>
+                </div>
+            </section>
+
+            <!-- Description -->
+            <section id="about" class="product-group">
+                <h2 class="product-group-title" data-i18n="automation.about.label">За продуктите</h2>
+                <p class="product-page-desc" data-i18n="automation.desc">Разработваме и произвеждаме автоматизирани машини и системи за промишлено производство. Проектите включват конвейери, манипулатори, специализирани машини и цялостни автоматизационни решения. Всяка машина е изработена прецизно по техническа документация и е оптимизирана за конкретното производствено приложение.</p>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.follow">Следвайте ни</h4>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">f</a>
+                    <a href="#" class="social-link" aria-label="Instagram">ig</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.contact">Контакти</h4>
+                <p class="footer-text"><a href="tel:+35900000000">+359 00 000 0000</a></p>
+                <p class="footer-text" data-i18n="contact.address.value">ул. Примерна 1, гр. София, 1000</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.sitemap">Карта на сайта</h4>
+                <nav class="footer-nav">
+                    <a href="./index.html"  data-i18n="nav.services">Услуги</a>
+                    <a href="./about.html"  data-i18n="nav.about">За нас</a>
+                    <a href="./contact.html" data-i18n="nav.contact">Контакти</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span data-i18n="footer.rights">© 2025 PlasmaCraft BG. Всички права запазени.</span>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

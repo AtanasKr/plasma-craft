@@ -4,23 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlasmaCraft BG</title>
-     <script>
-        (function() {
+    <meta name="description" content="PlasmaCraft BG – Contact us: phone, email, address, working hours and location map.">
+    <title>PlasmaCraft BG – Контакти / Contact</title>
+    <script>
+        (function () {
             const theme = localStorage.getItem('theme') || 'light';
-            const lang  = localStorage.getItem('lang')  || 'bg';
+            const lang = localStorage.getItem('lang') || 'bg';
             document.documentElement.setAttribute('data-theme', theme);
             document.documentElement.setAttribute('lang', lang);
         })();
     </script>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/contact.css">
 </head>
 
 <body>
-    <!--NAV-->
-    <nav class="nav">
 
-        <!-- Language picker -->
+    <!-- ══ NAV ══ -->
+    <nav class="nav">
         <div class="nav-side nav-side-left">
             <div class="lang-switch">
                 <span data-lang="bg" onclick="setLang('bg')">BG</span>
@@ -29,23 +30,194 @@
         </div>
 
         <div class="nav-left">
-            <a class="nav-pill" href="./index.html" data-i18n="nav.home">Начало</a>
-            <a class="nav-pill" href="./services.html" data-i18n="nav.services">Услуги</a>
+            <a class="nav-pill" href="./index.html" data-i18n="nav.services">Услуги</a>
+            <div class="nav-dropdown">
+                <span class="nav-pill dropdown-trigger" data-i18n="nav.products">Продукти</span>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./railings.html" data-i18n="products.railings">Парапети</a>
+                    <a class="dropdown-item" href="./doors.html"    data-i18n="products.doors">Врати</a>
+                    <a class="dropdown-item" href="./fences.html"   data-i18n="products.fences">Огради</a>
+                    <a class="dropdown-item" href="./fitness.html"  data-i18n="products.fitness">Фитнес машини</a>
+                    <a class="dropdown-item" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
+                    <a class="dropdown-item" href="./other.html"    data-i18n="products.other">Други продукти</a>
+                </div>
+            </div>
         </div>
 
-        <img src="assets/logo.png" alt="logo">
+        <img src="assets/logo.png" alt="PlasmaCraft BG logo">
 
         <div class="nav-right">
             <a class="nav-pill" href="./about.html" data-i18n="nav.about">За нас</a>
             <a class="nav-pill active" href="./contact.html" data-i18n="nav.contact">Контакти</a>
         </div>
 
-        <!-- Theme toggle -->
         <div class="nav-side nav-side-right">
             <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
         </div>
 
+        <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a class="nav-pill" href="./index.html" data-i18n="nav.services">Услуги</a>
+        <div class="mobile-products-group">
+            <div class="mobile-products-label" data-i18n="nav.products">Продукти</div>
+            <div class="mobile-products-links">
+                <a class="nav-pill-sm" href="./railings.html"   data-i18n="products.railings">Парапети</a>
+                <a class="nav-pill-sm" href="./doors.html"      data-i18n="products.doors">Врати</a>
+                <a class="nav-pill-sm" href="./fences.html"     data-i18n="products.fences">Огради</a>
+                <a class="nav-pill-sm" href="./fitness.html"    data-i18n="products.fitness">Фитнес машини</a>
+                <a class="nav-pill-sm" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
+                <a class="nav-pill-sm" href="./other.html"      data-i18n="products.other">Други продукти</a>
+            </div>
+        </div>
+        <a class="nav-pill" href="./about.html" data-i18n="nav.about">За нас</a>
+        <a class="nav-pill active" href="./contact.html" data-i18n="nav.contact">Контакти</a>
+        <div class="mobile-menu-controls">
+            <div class="lang-switch">
+                <span data-lang="bg" onclick="setLang('bg')">BG</span>
+                <span data-lang="en" onclick="setLang('en')">EN</span>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+    </div>
+
+    <!-- ══ PAGE LAYOUT ══ -->
+    <div class="page-layout">
+
+        <!-- Left submenu panel -->
+        <aside class="page-sidebar">
+            <h2 class="sidebar-heading" data-i18n="nav.contact">Контакти</h2>
+            <nav class="sidebar-nav" aria-label="Contact sections">
+                <a href="#phone"   class="sidebar-link" data-i18n="contact.sidebar.phone">Телефон</a>
+                <a href="#email"   class="sidebar-link" data-i18n="contact.sidebar.email">Имейл</a>
+                <a href="#address" class="sidebar-link" data-i18n="contact.sidebar.address">Адрес</a>
+                <a href="#hours"   class="sidebar-link" data-i18n="contact.sidebar.hours">Работно Време</a>
+                <a href="#social"  class="sidebar-link" data-i18n="contact.sidebar.social">Социални мрежи</a>
+                <a href="#map"     class="sidebar-link" data-i18n="contact.sidebar.map">Карта</a>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main class="page-content">
+
+            <!-- Page header -->
+            <header class="contact-page-header">
+                <p class="pointer-text">
+                    <span class="line"></span>
+                    <span data-i18n="contact.tagline">Свържете се с нас</span>
+                </p>
+                <h1 class="page-title" data-i18n="contact.title">КОНТАКТИ</h1>
+            </header>
+
+            <!-- Phone -->
+            <section id="phone" class="contact-section">
+                <h2 class="contact-section-title" data-i18n="contact.phone.label">Телефон</h2>
+                <div class="contact-entries">
+                    <div class="contact-entry">
+                        <span class="entry-role" data-i18n="contact.phone.engineer">Инженер</span>
+                        <a class="entry-value" href="tel:+35900000001">+359 00 000 0001</a>
+                    </div>
+                    <div class="contact-entry">
+                        <span class="entry-role" data-i18n="contact.phone.office">Офис</span>
+                        <a class="entry-value" href="tel:+35900000002">+359 00 000 0002</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Email -->
+            <section id="email" class="contact-section">
+                <h2 class="contact-section-title" data-i18n="contact.email.label">Имейл</h2>
+                <div class="contact-entries">
+                    <div class="contact-entry">
+                        <a class="entry-value" href="mailto:info@plasmacraft.bg">info@plasmacraft.bg</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Address -->
+            <section id="address" class="contact-section">
+                <h2 class="contact-section-title" data-i18n="contact.address.label">Адрес</h2>
+                <div class="contact-entries">
+                    <div class="contact-entry">
+                        <span class="entry-value" data-i18n="contact.address.value">ул. Примерна 1, гр. София, 1000</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Working Hours -->
+            <section id="hours" class="contact-section">
+                <h2 class="contact-section-title" data-i18n="contact.hours.label">Работно Време</h2>
+                <ul class="hours-list">
+                    <li data-i18n="contact.hours.weekdays">Понеделник – Петък: 08:00 – 17:00</li>
+                    <li data-i18n="contact.hours.saturday">Събота: 09:00 – 13:00</li>
+                    <li class="closed" data-i18n="contact.hours.sunday">Неделя: Почивен ден</li>
+                </ul>
+            </section>
+
+            <!-- Social Media -->
+            <section id="social" class="contact-section">
+                <h2 class="contact-section-title" data-i18n="contact.social.label">Социални мрежи</h2>
+                <div class="social-row">
+                    <a href="#" class="social-link" aria-label="Facebook">f</a>
+                    <a href="#" class="social-link" aria-label="Instagram">ig</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                </div>
+            </section>
+
+            <!-- Map -->
+            <section id="map" class="contact-section">
+                <h2 class="contact-section-title" data-i18n="contact.map.label">Намерете ни</h2>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93760.93398742977!2d23.23810498955078!3d42.69774100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8682cb317bf5%3A0x400a01269bf5e60!2sSofia%2C%20Bulgaria!5e0!3m2!1sen!2sbg!4v1700000000000!5m2!1sen!2sbg"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Map – Sofia, Bulgaria">
+                    </iframe>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.follow">Следвайте ни</h4>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">f</a>
+                    <a href="#" class="social-link" aria-label="Instagram">ig</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.contact">Контакти</h4>
+                <p class="footer-text"><a href="tel:+35900000000">+359 00 000 0000</a></p>
+                <p class="footer-text" data-i18n="contact.address.value">ул. Примерна 1, гр. София, 1000</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.sitemap">Карта на сайта</h4>
+                <nav class="footer-nav">
+                    <a href="./index.html" data-i18n="nav.services">Услуги</a>
+                    <a href="./about.html" data-i18n="nav.about">За нас</a>
+                    <a href="./contact.html" data-i18n="nav.contact">Контакти</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span data-i18n="footer.rights">© 2025 PlasmaCraft BG. Всички права запазени.</span>
+        </div>
+    </footer>
+
     <script src="scripts/script.js"></script>
 </body>
 

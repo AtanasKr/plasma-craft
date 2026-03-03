@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlasmaCraft BG</title>
+    <meta name="description" content="PlasmaCraft BG – Engineering &amp; Manufacturing Services: laser cutting, plasma cutting, welding, automation, custom projects.">
+    <title>PlasmaCraft BG – Услуги / Services</title>
     <script>
         (function () {
             const theme = localStorage.getItem('theme') || 'light';
@@ -14,14 +15,13 @@
         })();
     </script>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/services.css">
 </head>
 
 <body>
-    <!--NAV-->
-    <nav class="nav">
 
-        <!-- Language picker -->
+    <!-- ══ NAV ══ -->
+    <nav class="nav">
         <div class="nav-side nav-side-left">
             <div class="lang-switch">
                 <span data-lang="bg" onclick="setLang('bg')">BG</span>
@@ -30,36 +30,51 @@
         </div>
 
         <div class="nav-left">
-            <a class="nav-pill active" href="./index.html" data-i18n="nav.home">Начало</a>
-            <a class="nav-pill" href="./services.html" data-i18n="nav.services">Услуги</a>
+            <a class="nav-pill active" href="./index.html" data-i18n="nav.services">Услуги</a>
+            <div class="nav-dropdown">
+                <span class="nav-pill dropdown-trigger" data-i18n="nav.products">Продукти</span>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./railings.html" data-i18n="products.railings">Парапети</a>
+                    <a class="dropdown-item" href="./doors.html"    data-i18n="products.doors">Врати</a>
+                    <a class="dropdown-item" href="./fences.html"   data-i18n="products.fences">Огради</a>
+                    <a class="dropdown-item" href="./fitness.html"  data-i18n="products.fitness">Фитнес машини</a>
+                    <a class="dropdown-item" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
+                    <a class="dropdown-item" href="./other.html"    data-i18n="products.other">Други продукти</a>
+                </div>
+            </div>
         </div>
 
-        <img src="assets/logo.png" alt="logo">
+        <img src="assets/logo.png" alt="PlasmaCraft BG logo">
 
         <div class="nav-right">
-            <a class="nav-pill" href="./about.html" data-i18n="nav.about">За нас</a>
+            <a class="nav-pill" href="./about.html"   data-i18n="nav.about">За нас</a>
             <a class="nav-pill" href="./contact.html" data-i18n="nav.contact">Контакти</a>
         </div>
 
-        <!-- Theme toggle -->
         <div class="nav-side nav-side-right">
             <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
         </div>
 
-        <!-- Hamburger button (mobile only) -->
         <button class="hamburger" id="hamburgerBtn" onclick="toggleMenu()" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
-
     </nav>
 
-    <!-- Mobile menu overlay -->
+    <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a class="nav-pill active" href="./index.html" data-i18n="nav.home">Начало</a>
-        <a class="nav-pill" href="./services.html" data-i18n="nav.services">Услуги</a>
-        <a class="nav-pill" href="./about.html" data-i18n="nav.about">За нас</a>
+        <a class="nav-pill active" href="./index.html"  data-i18n="nav.services">Услуги</a>
+        <div class="mobile-products-group">
+            <div class="mobile-products-label" data-i18n="nav.products">Продукти</div>
+            <div class="mobile-products-links">
+                <a class="nav-pill-sm" href="./railings.html"   data-i18n="products.railings">Парапети</a>
+                <a class="nav-pill-sm" href="./doors.html"      data-i18n="products.doors">Врати</a>
+                <a class="nav-pill-sm" href="./fences.html"     data-i18n="products.fences">Огради</a>
+                <a class="nav-pill-sm" href="./fitness.html"    data-i18n="products.fitness">Фитнес машини</a>
+                <a class="nav-pill-sm" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
+                <a class="nav-pill-sm" href="./other.html"      data-i18n="products.other">Други продукти</a>
+            </div>
+        </div>
+        <a class="nav-pill" href="./about.html"   data-i18n="nav.about">За нас</a>
         <a class="nav-pill" href="./contact.html" data-i18n="nav.contact">Контакти</a>
         <div class="mobile-menu-controls">
             <div class="lang-switch">
@@ -70,39 +85,194 @@
         </div>
     </div>
 
-    <main class="main-content">
-        <section class="two-column">
-            <div class="column text-column">
+    <!-- ══ COMPANY MOTTO ══ -->
+    <section class="company-motto">
+        <div class="motto-inner">
+            <div class="motto-text-col">
                 <p class="pointer-text">
                     <span class="line"></span>
                     <span data-i18n="hero.tagline">Прецизно метално изкуство</span>
                 </p>
-                <p class="slogan-info">
+                <p class="motto-slogan">
                     <span data-i18n="hero.line1">ИЗКОВАНО</span><br>
-                    <span data-i18n="hero.line2.prefix">ОТ</span>
-                    <span class="outline-text" data-i18n="hero.line2.fire">ОГЪН</span>
-                    <span data-i18n="hero.line3">И</span><br>
+                    <span data-i18n="hero.line2.prefix">ОТ</span>&nbsp;<span class="motto-accent" data-i18n="hero.line2.fire">ОГЪН</span>&nbsp;<span data-i18n="hero.line3">И</span><br>
                     <span data-i18n="hero.line4">СТОМАНА</span>
                 </p>
-                <p data-i18n="hero.description">
-                    Изрязване с ЦНК плазма за стенно<br>
-                    изкуство, надписи, декоративни панели и<br>
-                    промишлено производство. Всеки разрез<br>
-                    разказва история.
-                </p>
-                <div class="project-order">
-                    <a href="#" class="project-order-link" data-i18n="hero.cta">
-                        ПОРЪЧАЙ ПО ПРОЕКТ
-                    </a>
+            </div>
+            <div class="motto-desc-col">
+                <p data-i18n="hero.description">Изрязване с ЦНК плазма за стенно изкуство, надписи, декоративни панели и промишлено производство. Всеки разрез разказва история.</p>
+                <a href="./contact.html" class="motto-cta" data-i18n="hero.cta">ПОРЪЧАЙ ПО ПРОЕКТ</a>
+            </div>
+        </div>
+        <hr class="motto-divider">
+    </section>
+
+    <!-- ══ PAGE LAYOUT: sidebar + services ══ -->
+    <div class="page-layout">
+
+        <aside class="page-sidebar">
+            <h2 class="sidebar-heading" data-i18n="nav.services">Услуги</h2>
+            <nav class="sidebar-nav">
+                <a href="#s1"  class="sidebar-link" data-i18n="services.s1.title">Инженерни услуги</a>
+                <a href="#s2"  class="sidebar-link" data-i18n="services.s2.title">Лазерно рязане</a>
+                <a href="#s3"  class="sidebar-link" data-i18n="services.s3.title">Плазмено рязане</a>
+                <a href="#s4"  class="sidebar-link" data-i18n="services.s4.title">Заваряване</a>
+                <a href="#s5"  class="sidebar-link" data-i18n="services.s5.title">Боядисване / Покритие</a>
+                <a href="#s6"  class="sidebar-link" data-i18n="services.s6.title">Автоматизация на процеси</a>
+                <a href="#s7"  class="sidebar-link" data-i18n="services.s7.title">Автоматизация на врати</a>
+                <a href="#s8"  class="sidebar-link" data-i18n="services.s8.title">Производствен монтаж</a>
+                <a href="#s9"  class="sidebar-link" data-i18n="services.s9.title">Видеонаблюдение</a>
+                <a href="#s10" class="sidebar-link" data-i18n="services.s10.title">Проекти по поръчка</a>
+                <a href="#s11" class="sidebar-link" data-i18n="services.s11.title">Транспортни услуги</a>
+            </nav>
+        </aside>
+
+        <main class="page-content">
+
+            <header class="services-page-header">
+                <div>
+                    <p class="pointer-text"><span class="line"></span><span data-i18n="services.tagline">Какво правим</span></p>
+                    <h1 class="page-title" data-i18n="services.title">НАШИТЕ УСЛУГИ</h1>
+                </div>
+                <div class="services-page-header-right">
+                    <p data-i18n="services.subtitle">От сложни технически проекти до тежко промишлено производство — прецизност при всяка задача.</p>
+                </div>
+            </header>
+
+            <section id="s1" class="service-section">
+                <div class="service-num">01</div>
+                <div class="service-body">
+                    <span class="service-icon">&#9998;</span>
+                    <h2 class="service-name" data-i18n="services.s1.title">Инженерни услуги</h2>
+                    <p class="service-desc" data-i18n="services.s1.desc">Технически чертежи и 3D моделиране.</p>
+                </div>
+            </section>
+
+            <section id="s2" class="service-section">
+                <div class="service-num">02</div>
+                <div class="service-body">
+                    <span class="service-icon">&#9196;</span>
+                    <h2 class="service-name" data-i18n="services.s2.title">Лазерно рязане</h2>
+                    <p class="service-desc" data-i18n="services.s2.desc">Прецизно лазерно рязане.</p>
+                </div>
+            </section>
+
+            <section id="s3" class="service-section">
+                <div class="service-num">03</div>
+                <div class="service-body">
+                    <span class="service-icon">&#128293;</span>
+                    <h2 class="service-name" data-i18n="services.s3.title">Плазмено рязане</h2>
+                    <p class="service-desc" data-i18n="services.s3.desc">ЦНК плазмено рязане.</p>
+                </div>
+            </section>
+
+            <section id="s4" class="service-section">
+                <div class="service-num">04</div>
+                <div class="service-body">
+                    <span class="service-icon">&#9889;</span>
+                    <h2 class="service-name" data-i18n="services.s4.title">Заваряване</h2>
+                    <p class="service-desc" data-i18n="services.s4.desc">MIG/MAG, TIG и електродъгово заваряване.</p>
+                </div>
+            </section>
+
+            <section id="s5" class="service-section">
+                <div class="service-num">05</div>
+                <div class="service-body">
+                    <span class="service-icon">&#127912;</span>
+                    <h2 class="service-name" data-i18n="services.s5.title">Боядисване / Покритие</h2>
+                    <p class="service-desc" data-i18n="services.s5.desc">Прахово боядисване и антикорозионни покрития.</p>
+                </div>
+            </section>
+
+            <section id="s6" class="service-section">
+                <div class="service-num">06</div>
+                <div class="service-body">
+                    <span class="service-icon">&#9881;</span>
+                    <h2 class="service-name" data-i18n="services.s6.title">Автоматизация на процеси</h2>
+                    <p class="service-desc" data-i18n="services.s6.desc">Проектиране и внедряване на автоматизирани системи.</p>
+                </div>
+            </section>
+
+            <section id="s7" class="service-section">
+                <div class="service-num">07</div>
+                <div class="service-body">
+                    <span class="service-icon">&#128682;</span>
+                    <h2 class="service-name" data-i18n="services.s7.title">Автоматизация на врати</h2>
+                    <p class="service-desc" data-i18n="services.s7.desc">Монтаж и програмиране на автоматични системи за врати.</p>
+                </div>
+            </section>
+
+            <section id="s8" class="service-section">
+                <div class="service-num">08</div>
+                <div class="service-body">
+                    <span class="service-icon">&#128295;</span>
+                    <h2 class="service-name" data-i18n="services.s8.title">Производствен монтаж</h2>
+                    <p class="service-desc" data-i18n="services.s8.desc">Производство и сглобяване на метални конструкции.</p>
+                </div>
+            </section>
+
+            <section id="s9" class="service-section">
+                <div class="service-num">09</div>
+                <div class="service-body">
+                    <span class="service-icon">&#128247;</span>
+                    <h2 class="service-name" data-i18n="services.s9.title">Видеонаблюдение</h2>
+                    <p class="service-desc" data-i18n="services.s9.desc">Проектиране и монтаж на системи за видеонаблюдение.</p>
+                </div>
+            </section>
+
+            <section id="s10" class="service-section">
+                <div class="service-num">10</div>
+                <div class="service-body">
+                    <span class="service-icon">&#128161;</span>
+                    <h2 class="service-name" data-i18n="services.s10.title">Проекти по поръчка</h2>
+                    <p class="service-desc" data-i18n="services.s10.desc">Машини, конструкции, части и прототипи по индивидуален проект.</p>
+                </div>
+            </section>
+
+            <section id="s11" class="service-section">
+                <div class="service-num">11</div>
+                <div class="service-body">
+                    <span class="service-icon">&#128666;</span>
+                    <h2 class="service-name" data-i18n="services.s11.title">Транспортни услуги</h2>
+                    <p class="service-desc" data-i18n="services.s11.desc">Логистика и транспорт на готова продукция и материали.</p>
+                </div>
+            </section>
+
+            <hr class="services-end-divider">
+
+        </main>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.follow">Следвайте ни</h4>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">f</a>
+                    <a href="#" class="social-link" aria-label="Instagram">ig</a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
                 </div>
             </div>
-
-            <div class="column image-column">
-                <img src="assets/tree-front.png" alt="Plasma cutting machine">
-                <button class="view-work-button" data-i18n="hero.viewWork">ВИЖ НАШАТА РАБОТА</button>
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.contact">Контакти</h4>
+                <p class="footer-text"><a href="tel:+35900000000">+359 00 000 0000</a></p>
+                <p class="footer-text" data-i18n="contact.address.value">ул. Примерна 1, гр. София, 1000</p>
             </div>
-        </section>
-    </main>
+            <div class="footer-col">
+                <h4 class="footer-heading" data-i18n="footer.sitemap">Карта на сайта</h4>
+                <nav class="footer-nav">
+                    <a href="./index.html"  data-i18n="nav.services">Услуги</a>
+                    <a href="./about.html"  data-i18n="nav.about">За нас</a>
+                    <a href="./contact.html" data-i18n="nav.contact">Контакти</a>
+                </nav>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span data-i18n="footer.rights">© 2025 PlasmaCraft BG. Всички права запазени.</span>
+        </div>
+    </footer>
+
     <script src="scripts/script.js"></script>
 </body>
 
