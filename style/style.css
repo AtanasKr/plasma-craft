@@ -571,6 +571,16 @@ nav.nav img {
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+/* Invisible bridge below the trigger so hover isn't lost crossing the gap */
+.nav-dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 12px;
+}
+
 .nav-dropdown:hover .dropdown-menu,
 .nav-dropdown.open .dropdown-menu {
     opacity: 1;

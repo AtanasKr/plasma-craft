@@ -467,8 +467,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         if (active) active.classList.add('active');
                     }
                 });
-            }, { rootMargin: '-20% 0px -70% 0px' });
+            }, { rootMargin: '-10% 0px -50% 0px' });
             targets.forEach(t => observer.observe(t));
+
+            // Fallback: when scrolled to the bottom, always highlight the last link
+            window.addEventListener('scroll', () => {
+                if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50) {
+                    sideLinks.forEach(l => l.classList.remove('active'));
+                    sideLinks[sideLinks.length - 1].classList.add('active');
+                }
+            }, { passive: true });
         }
     }
 

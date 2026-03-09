@@ -102,6 +102,8 @@
 /* ════════════════════════════
    COMPANY MOTTO (above services on index.html)
 ════════════════════════════ */
+.company-motto .pointer-text { justify-content: center; }
+
 .company-motto {
     max-width: 1400px;
     margin: 0 auto;
@@ -111,12 +113,15 @@
 }
 
 .motto-inner {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 5rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 1.5rem;
     padding-bottom: 3rem;
     animation: fadeUp 0.8s ease both;
+    max-width: 720px;
+    width: 100%;
 }
 
 .motto-slogan {
@@ -200,6 +205,6 @@
 /* Mobile */
 @media (max-width: 900px) {
     .company-motto { padding: 2rem 1rem 0; }
-    .motto-inner { grid-template-columns: 1fr; gap: 2rem; padding-bottom: 2rem; }
+    .motto-inner { gap: 1rem; padding-bottom: 2rem; }
     .motto-slogan { font-size: 3.5rem; }
 }
