@@ -448,6 +448,45 @@ nav.nav img {
 [data-i18n] { visibility: hidden; }
 
 /* ════════════════════════════
+   NAV RESPONSIVE BREAKPOINTS
+════════════════════════════ */
+
+/* Large monitors that aren't huge */
+@media (max-width: 1400px) {
+    nav.nav { margin-left: 10%; margin-right: 10%; }
+}
+
+/* Medium desktops / laptops */
+@media (max-width: 1150px) {
+    nav.nav {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 0 2em;
+    }
+    .nav-left, .nav-right { gap: 2em; }
+    .nav-side-left { left: -3.5em; }
+    .nav-side-right { right: -3.5em; }
+}
+
+/* Small desktops / large tablets — side controls can't float outside at this width,
+   bring them inside the nav flow */
+@media (max-width: 960px) and (min-width: 769px) {
+    nav.nav {
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+        padding: 0 1.2em;
+    }
+    .nav-side {
+        position: static;
+        flex-direction: row;
+        gap: 0.4rem;
+        align-items: center;
+    }
+    .nav-left, .nav-right { gap: 0.8em; }
+    .nav-pill { font-size: 1em; padding: 6px 10px; }
+}
+
+/* ════════════════════════════
    MOBILE
 ════════════════════════════ */
 @media (max-width: 768px) {
