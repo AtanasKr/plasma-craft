@@ -208,3 +208,323 @@
     .motto-inner { gap: 1rem; padding-bottom: 2rem; }
     .motto-slogan { font-size: 3.5rem; }
 }
+
+/* ════════════════════════════
+   HOME PAGE — THREE SECTIONS
+════════════════════════════ */
+
+.home-block {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* ── Section 1: Hero + Services ── */
+
+.home-hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #e8e8e8;
+    margin-bottom: 3rem;
+    animation: fadeUp 0.8s ease both;
+}
+
+.home-hero-left { flex: 1; }
+
+.home-hero-right {
+    flex: 1;
+    max-width: 420px;
+}
+
+.home-hero-right p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.8rem;
+}
+
+.home-services-block {
+    animation: fadeUp 0.9s ease 0.15s both;
+}
+
+.services-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 0.55rem;
+    margin-top: 1.4rem;
+}
+
+.service-mini {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.87rem;
+    font-weight: 500;
+    color: #444;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
+    cursor: default;
+}
+
+.service-mini:hover {
+    border-color: #ff6a00;
+    background: rgba(255, 106, 0, 0.03);
+    color: #111;
+}
+
+.service-mini-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+/* ── Section Dividers ── */
+
+.home-section-divider {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.divider-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ddd 25%, #ddd 75%, transparent);
+}
+
+.divider-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.22em;
+    color: #bbb;
+    white-space: nowrap;
+}
+
+/* ── Section 2/3 shared header ── */
+
+.home-block-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e8e8e8;
+    animation: fadeUp 0.7s ease both;
+}
+
+.home-block-subtitle {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #666;
+    max-width: 380px;
+    margin: 0;
+}
+
+/* ── Section 2: Products grid ── */
+
+.home-products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    animation: fadeUp 0.8s ease 0.1s both;
+}
+
+.product-cat-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.8rem 1.6rem;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.product-cat-card:hover {
+    border-color: #ff6a00;
+    box-shadow: 0 4px 24px rgba(255, 106, 0, 0.08);
+}
+
+.product-cat-card:hover .product-cat-name { color: #ff6a00; }
+.product-cat-card:hover .product-cat-arrow { transform: translateX(6px); color: #ff6a00; }
+
+.product-cat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #eee;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+    user-select: none;
+}
+
+.product-cat-name {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 0.6rem;
+    transition: color 0.2s;
+}
+
+.product-cat-desc {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.87rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #777;
+    margin: 0 0 1.5rem;
+    flex: 1;
+}
+
+.product-cat-arrow {
+    font-size: 1.1rem;
+    color: #bbb;
+    transition: transform 0.25s, color 0.25s;
+    align-self: flex-end;
+}
+
+/* ── Section 3: Projects grid ── */
+
+.home-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    animation: fadeUp 0.8s ease 0.1s both;
+}
+
+.project-card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ebebeb;
+    background: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.1);
+}
+
+.project-img-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, #e8e8e8 0%, #f4f4f4 50%, #e0e0e0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    opacity: 0.4;
+}
+
+.project-img-placeholder::after {
+    content: '▣';
+}
+
+.project-info {
+    padding: 1.2rem 1.4rem 1.5rem;
+}
+
+.project-cat {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #ff6a00;
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+.project-title {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 0.5rem;
+}
+
+.project-desc {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.87rem;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #777;
+    margin: 0;
+}
+
+/* ── Dark mode ── */
+
+[data-theme="dark"] .home-hero { border-bottom-color: #2a2a2a; }
+[data-theme="dark"] .home-hero-right p { color: #888; }
+
+[data-theme="dark"] .service-mini { border-color: #2a2a2a; color: #888; }
+[data-theme="dark"] .service-mini:hover { border-color: #ff6a00; color: #ccc; background: rgba(255,106,0,0.04); }
+
+[data-theme="dark"] .divider-line { background: linear-gradient(to right, transparent, #2a2a2a 25%, #2a2a2a 75%, transparent); }
+[data-theme="dark"] .divider-label { color: #444; }
+
+[data-theme="dark"] .home-block-header { border-bottom-color: #2a2a2a; }
+[data-theme="dark"] .home-block-subtitle { color: #777; }
+
+[data-theme="dark"] .product-cat-card { background: #1a1a1a; border-color: #2a2a2a; }
+[data-theme="dark"] .product-cat-card:hover { border-color: #ff6a00; box-shadow: 0 4px 24px rgba(255,106,0,0.1); }
+[data-theme="dark"] .product-cat-num { color: #232323; }
+[data-theme="dark"] .product-cat-name { color: #e8e8e8; }
+[data-theme="dark"] .product-cat-desc { color: #777; }
+[data-theme="dark"] .product-cat-arrow { color: #444; }
+
+[data-theme="dark"] .project-card { background: #1a1a1a; border-color: #2a2a2a; }
+[data-theme="dark"] .project-card:hover { box-shadow: 0 10px 36px rgba(0,0,0,0.4); }
+[data-theme="dark"] .project-img-placeholder { background: linear-gradient(135deg, #222 0%, #2a2a2a 50%, #1e1e1e 100%); }
+[data-theme="dark"] .project-title { color: #e8e8e8; }
+[data-theme="dark"] .project-desc { color: #777; }
+
+/* ── Responsive ── */
+
+@media (max-width: 1100px) {
+    .home-products-grid { grid-template-columns: repeat(2, 1fr); }
+    .home-projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+    .home-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        padding-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .home-hero-right { max-width: 100%; }
+    .services-mini-grid { grid-template-columns: repeat(2, 1fr); }
+    .home-block-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    .home-block-subtitle { max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+    .home-block { padding: 2.5rem 1rem; }
+    .home-section-divider { padding: 0 1rem; gap: 1rem; }
+    .services-mini-grid { grid-template-columns: 1fr 1fr; gap: 0.4rem; }
+    .home-products-grid { grid-template-columns: 1fr; }
+    .home-projects-grid { grid-template-columns: 1fr; }
+    .motto-slogan { font-size: 3.5rem; }
+}

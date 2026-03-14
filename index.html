@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="PlasmaCraft BG – Engineering &amp; Manufacturing Services: laser cutting, plasma cutting, welding, automation, custom projects.">
-    <title>PlasmaCraft BG – Услуги / Services</title>
+    <title>PlasmaCraft BG – Начало / Home</title>
     <script>
         (function () {
             const theme = localStorage.getItem('theme') || 'light';
@@ -30,7 +30,7 @@
         </div>
 
         <div class="nav-left">
-            <a class="nav-pill active" href="./index.html" data-i18n="nav.services">Услуги</a>
+            <a class="nav-pill active" href="./index.html" data-i18n="nav.home">Начало</a>
             <div class="nav-dropdown">
                 <span class="nav-pill dropdown-trigger" data-i18n="nav.products">Продукти</span>
                 <div class="dropdown-menu">
@@ -62,7 +62,7 @@
 
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a class="nav-pill active" href="./index.html"  data-i18n="nav.services">Услуги</a>
+        <a class="nav-pill active" href="./index.html"  data-i18n="nav.home">Начало</a>
         <div class="mobile-products-group">
             <div class="mobile-products-label" data-i18n="nav.products">Продукти</div>
             <div class="mobile-products-links">
@@ -85,10 +85,13 @@
         </div>
     </div>
 
-    <!-- ══ COMPANY MOTTO ══ -->
-    <section class="company-motto">
-        <div class="motto-inner">
-            <div class="motto-text-col">
+    <!-- ══════════════════════════════════════════════
+         SECTION 1 — ОПИСАНИЕ НА ФИРМАТА / COMPANY
+    ══════════════════════════════════════════════ -->
+    <section class="home-block" id="home-about">
+
+        <div class="home-hero">
+            <div class="home-hero-left">
                 <p class="pointer-text">
                     <span class="line"></span>
                     <span data-i18n="hero.tagline">Прецизно метално изкуство</span>
@@ -99,149 +102,179 @@
                     <span data-i18n="hero.line4">СТОМАНА</span>
                 </p>
             </div>
-            <div class="motto-desc-col">
+            <div class="home-hero-right">
                 <p data-i18n="hero.description">Изрязване с ЦНК плазма за стенно изкуство, надписи, декоративни панели и промишлено производство. Всеки разрез разказва история.</p>
                 <a href="./contact.html" class="motto-cta" data-i18n="hero.cta">ПОРЪЧАЙ ПО ПРОЕКТ</a>
             </div>
         </div>
-        <hr class="motto-divider">
+
+        <div class="home-services-block">
+            <p class="pointer-text">
+                <span class="line"></span>
+                <span data-i18n="services.tagline">Какво правим</span>
+            </p>
+            <div class="services-mini-grid">
+                <div class="service-mini"><span class="service-mini-icon">&#9998;</span><span data-i18n="services.s1.title">Инженерни услуги</span></div>
+                <div class="service-mini"><span class="service-mini-icon">&#9196;</span><span data-i18n="services.s2.title">Лазерно рязане</span></div>
+                <div class="service-mini"><span class="service-mini-icon">&#128293;</span><span data-i18n="services.s3.title">Плазмено рязане</span></div>
+                <div class="service-mini"><span class="service-mini-icon">&#9889;</span><span data-i18n="services.s4.title">Заваряване</span></div>
+                <div class="service-mini"><span class="service-mini-icon">&#127912;</span><span data-i18n="services.s5.title">Боядисване / Покритие</span></div>
+                <div class="service-mini"><span class="service-mini-icon">&#9881;</span><span data-i18n="services.s6.title">Автоматизация на процеси</span></div>
+                <div class="service-mini"><span class="service-mini-icon">&#128682;</span><span data-i18n="services.s7.title">Автоматизация на врати</span></div>
+                <div class="service-mini"><span class="service-mini-icon">&#128295;</span><span data-i18n="services.s8.title">Производствен монтаж</span></div>
+                <div class="service-mini"><span class="service-mini-icon">&#128247;</span><span data-i18n="services.s9.title">Видеонаблюдение</span></div>
+                <div class="service-mini"><span class="service-mini-icon">&#128161;</span><span data-i18n="services.s10.title">Проекти по поръчка</span></div>
+                <div class="service-mini"><span class="service-mini-icon">&#128666;</span><span data-i18n="services.s11.title">Транспортни услуги</span></div>
+            </div>
+        </div>
+
     </section>
 
-    <!-- ══ PAGE LAYOUT: sidebar + services ══ -->
-    <div class="page-layout">
-
-        <aside class="page-sidebar">
-            <h2 class="sidebar-heading" data-i18n="nav.services">Услуги</h2>
-            <nav class="sidebar-nav">
-                <a href="#s1"  class="sidebar-link" data-i18n="services.s1.title">Инженерни услуги</a>
-                <a href="#s2"  class="sidebar-link" data-i18n="services.s2.title">Лазерно рязане</a>
-                <a href="#s3"  class="sidebar-link" data-i18n="services.s3.title">Плазмено рязане</a>
-                <a href="#s4"  class="sidebar-link" data-i18n="services.s4.title">Заваряване</a>
-                <a href="#s5"  class="sidebar-link" data-i18n="services.s5.title">Боядисване / Покритие</a>
-                <a href="#s6"  class="sidebar-link" data-i18n="services.s6.title">Автоматизация на процеси</a>
-                <a href="#s7"  class="sidebar-link" data-i18n="services.s7.title">Автоматизация на врати</a>
-                <a href="#s8"  class="sidebar-link" data-i18n="services.s8.title">Производствен монтаж</a>
-                <a href="#s9"  class="sidebar-link" data-i18n="services.s9.title">Видеонаблюдение</a>
-                <a href="#s10" class="sidebar-link" data-i18n="services.s10.title">Проекти по поръчка</a>
-                <a href="#s11" class="sidebar-link" data-i18n="services.s11.title">Транспортни услуги</a>
-            </nav>
-        </aside>
-
-        <main class="page-content">
-
-            <header class="services-page-header">
-                <div>
-                    <p class="pointer-text"><span class="line"></span><span data-i18n="services.tagline">Какво правим</span></p>
-                    <h1 class="page-title" data-i18n="services.title">НАШИТЕ УСЛУГИ</h1>
-                </div>
-                <div class="services-page-header-right">
-                    <p data-i18n="services.subtitle">От сложни технически проекти до тежко промишлено производство — прецизност при всяка задача.</p>
-                </div>
-            </header>
-
-            <section id="s1" class="service-section">
-                <div class="service-num">01</div>
-                <div class="service-body">
-                    <span class="service-icon">&#9998;</span>
-                    <h2 class="service-name" data-i18n="services.s1.title">Инженерни услуги</h2>
-                    <p class="service-desc" data-i18n="services.s1.desc">Технически чертежи и 3D моделиране.</p>
-                </div>
-            </section>
-
-            <section id="s2" class="service-section">
-                <div class="service-num">02</div>
-                <div class="service-body">
-                    <span class="service-icon">&#9196;</span>
-                    <h2 class="service-name" data-i18n="services.s2.title">Лазерно рязане</h2>
-                    <p class="service-desc" data-i18n="services.s2.desc">Прецизно лазерно рязане.</p>
-                </div>
-            </section>
-
-            <section id="s3" class="service-section">
-                <div class="service-num">03</div>
-                <div class="service-body">
-                    <span class="service-icon">&#128293;</span>
-                    <h2 class="service-name" data-i18n="services.s3.title">Плазмено рязане</h2>
-                    <p class="service-desc" data-i18n="services.s3.desc">ЦНК плазмено рязане.</p>
-                </div>
-            </section>
-
-            <section id="s4" class="service-section">
-                <div class="service-num">04</div>
-                <div class="service-body">
-                    <span class="service-icon">&#9889;</span>
-                    <h2 class="service-name" data-i18n="services.s4.title">Заваряване</h2>
-                    <p class="service-desc" data-i18n="services.s4.desc">MIG/MAG, TIG и електродъгово заваряване.</p>
-                </div>
-            </section>
-
-            <section id="s5" class="service-section">
-                <div class="service-num">05</div>
-                <div class="service-body">
-                    <span class="service-icon">&#127912;</span>
-                    <h2 class="service-name" data-i18n="services.s5.title">Боядисване / Покритие</h2>
-                    <p class="service-desc" data-i18n="services.s5.desc">Прахово боядисване и антикорозионни покрития.</p>
-                </div>
-            </section>
-
-            <section id="s6" class="service-section">
-                <div class="service-num">06</div>
-                <div class="service-body">
-                    <span class="service-icon">&#9881;</span>
-                    <h2 class="service-name" data-i18n="services.s6.title">Автоматизация на процеси</h2>
-                    <p class="service-desc" data-i18n="services.s6.desc">Проектиране и внедряване на автоматизирани системи.</p>
-                </div>
-            </section>
-
-            <section id="s7" class="service-section">
-                <div class="service-num">07</div>
-                <div class="service-body">
-                    <span class="service-icon">&#128682;</span>
-                    <h2 class="service-name" data-i18n="services.s7.title">Автоматизация на врати</h2>
-                    <p class="service-desc" data-i18n="services.s7.desc">Монтаж и програмиране на автоматични системи за врати.</p>
-                </div>
-            </section>
-
-            <section id="s8" class="service-section">
-                <div class="service-num">08</div>
-                <div class="service-body">
-                    <span class="service-icon">&#128295;</span>
-                    <h2 class="service-name" data-i18n="services.s8.title">Производствен монтаж</h2>
-                    <p class="service-desc" data-i18n="services.s8.desc">Производство и сглобяване на метални конструкции.</p>
-                </div>
-            </section>
-
-            <section id="s9" class="service-section">
-                <div class="service-num">09</div>
-                <div class="service-body">
-                    <span class="service-icon">&#128247;</span>
-                    <h2 class="service-name" data-i18n="services.s9.title">Видеонаблюдение</h2>
-                    <p class="service-desc" data-i18n="services.s9.desc">Проектиране и монтаж на системи за видеонаблюдение.</p>
-                </div>
-            </section>
-
-            <section id="s10" class="service-section">
-                <div class="service-num">10</div>
-                <div class="service-body">
-                    <span class="service-icon">&#128161;</span>
-                    <h2 class="service-name" data-i18n="services.s10.title">Проекти по поръчка</h2>
-                    <p class="service-desc" data-i18n="services.s10.desc">Машини, конструкции, части и прототипи по индивидуален проект.</p>
-                </div>
-            </section>
-
-            <section id="s11" class="service-section">
-                <div class="service-num">11</div>
-                <div class="service-body">
-                    <span class="service-icon">&#128666;</span>
-                    <h2 class="service-name" data-i18n="services.s11.title">Транспортни услуги</h2>
-                    <p class="service-desc" data-i18n="services.s11.desc">Логистика и транспорт на готова продукция и материали.</p>
-                </div>
-            </section>
-
-            <hr class="services-end-divider">
-
-        </main>
+    <!-- ══ РАЗДЕЛИТЕЛНА ЛИНИЯ 1 ══ -->
+    <div class="home-section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-label" data-i18n="nav.products">ПРОДУКТИ</span>
+        <span class="divider-line"></span>
     </div>
+
+    <!-- ══════════════════════════════════════════════
+         SECTION 2 — ПРОДУКТИ / PRODUCTS
+    ══════════════════════════════════════════════ -->
+    <section class="home-block" id="home-products">
+
+        <header class="home-block-header">
+            <div>
+                <p class="pointer-text"><span class="line"></span><span data-i18n="home.products.tagline">Разгледайте</span></p>
+                <h2 class="page-title" data-i18n="home.products.title">НАШИТЕ ПРОДУКТИ</h2>
+            </div>
+            <p class="home-block-subtitle" data-i18n="home.products.subtitle">Разгледайте нашите продуктови категории — от парапети и огради до фитнес уреди и автоматизационни машини.</p>
+        </header>
+
+        <div class="home-products-grid">
+
+            <a href="./railings.html" class="product-cat-card">
+                <div class="product-cat-num">01</div>
+                <h3 class="product-cat-name" data-i18n="products.railings">Парапети</h3>
+                <p class="product-cat-desc" data-i18n="home.products.railings.desc">Стъклени, алуминиеви и метални парапети за всеки интериор и екстериор.</p>
+                <span class="product-cat-arrow">→</span>
+            </a>
+
+            <a href="./doors.html" class="product-cat-card">
+                <div class="product-cat-num">02</div>
+                <h3 class="product-cat-name" data-i18n="products.doors">Врати</h3>
+                <p class="product-cat-desc" data-i18n="home.products.doors.desc">Входни и гаражни врати с лазерна декорация, ролетни и с вложки от стъкло.</p>
+                <span class="product-cat-arrow">→</span>
+            </a>
+
+            <a href="./fences.html" class="product-cat-card">
+                <div class="product-cat-num">03</div>
+                <h3 class="product-cat-name" data-i18n="products.fences">Огради</h3>
+                <p class="product-cat-desc" data-i18n="home.products.fences.desc">Метални, алуминиеви и ролетни огради за жилищни и промишлени обекти.</p>
+                <span class="product-cat-arrow">→</span>
+            </a>
+
+            <a href="./fitness.html" class="product-cat-card">
+                <div class="product-cat-num">04</div>
+                <h3 class="product-cat-name" data-i18n="products.fitness">Фитнес машини</h3>
+                <p class="product-cat-desc" data-i18n="home.products.fitness.desc">Фитнес уреди по поръчка от галванизирана стомана за паркове, зали и дворове.</p>
+                <span class="product-cat-arrow">→</span>
+            </a>
+
+            <a href="./automation.html" class="product-cat-card">
+                <div class="product-cat-num">05</div>
+                <h3 class="product-cat-name" data-i18n="products.automation">Автоматизационни машини</h3>
+                <p class="product-cat-desc" data-i18n="home.products.automation.desc">Специализирани автоматизационни машини и производствени системи по проект.</p>
+                <span class="product-cat-arrow">→</span>
+            </a>
+
+            <a href="./other.html" class="product-cat-card">
+                <div class="product-cat-num">06</div>
+                <h3 class="product-cat-name" data-i18n="products.other">Други продукти</h3>
+                <p class="product-cat-desc" data-i18n="home.products.other.desc">Огнища, светещи надписи, хамаци и нестандартни изделия по поръчка.</p>
+                <span class="product-cat-arrow">→</span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ══ РАЗДЕЛИТЕЛНА ЛИНИЯ 2 ══ -->
+    <div class="home-section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-label" data-i18n="home.projects.title">ГОТОВИ ПРОЕКТИ</span>
+        <span class="divider-line"></span>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+         SECTION 3 — ГОТОВИ ПРОЕКТИ / COMPLETED PROJECTS
+    ══════════════════════════════════════════════ -->
+    <section class="home-block" id="home-projects">
+
+        <header class="home-block-header">
+            <div>
+                <p class="pointer-text"><span class="line"></span><span data-i18n="home.projects.tagline">Нашата работа</span></p>
+                <h2 class="page-title" data-i18n="home.projects.title">ГОТОВИ ПРОЕКТИ</h2>
+            </div>
+            <p class="home-block-subtitle" data-i18n="home.projects.subtitle">Разгледайте примери от реализирани проекти — декоративни конструкции, промишлено оборудване и специализирани решения.</p>
+        </header>
+
+        <div class="home-projects-grid">
+
+            <div class="project-card">
+                <div class="project-img-placeholder"></div>
+                <div class="project-info">
+                    <span class="project-cat" data-i18n="home.project.1.cat">Огради</span>
+                    <h3 class="project-title" data-i18n="home.project.1.title">Декоративна ограда</h3>
+                    <p class="project-desc" data-i18n="home.project.1.desc">Декоративна метална ограда с лазерно изрязани орнаменти за жилищен комплекс в София.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-placeholder"></div>
+                <div class="project-info">
+                    <span class="project-cat" data-i18n="home.project.2.cat">Парапети</span>
+                    <h3 class="project-title" data-i18n="home.project.2.title">Стъклени парапети</h3>
+                    <p class="project-desc" data-i18n="home.project.2.desc">Безрамкови стъклени парапети за тераса на офис сграда с метална носеща конструкция.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-placeholder"></div>
+                <div class="project-info">
+                    <span class="project-cat" data-i18n="home.project.3.cat">Автоматизация</span>
+                    <h3 class="project-title" data-i18n="home.project.3.title">Автоматизирана линия</h3>
+                    <p class="project-desc" data-i18n="home.project.3.desc">Специализирана автоматизирана производствена линия по технически проект на клиента.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-placeholder"></div>
+                <div class="project-info">
+                    <span class="project-cat" data-i18n="home.project.4.cat">Врати</span>
+                    <h3 class="project-title" data-i18n="home.project.4.title">Метални врати</h3>
+                    <p class="project-desc" data-i18n="home.project.4.desc">Комплект метални входни и гаражни врати с лазерна декорация за частен дом.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-placeholder"></div>
+                <div class="project-info">
+                    <span class="project-cat" data-i18n="home.project.5.cat">Фитнес</span>
+                    <h3 class="project-title" data-i18n="home.project.5.title">Фитнес уреди</h3>
+                    <p class="project-desc" data-i18n="home.project.5.desc">Серия от открити фитнес уреди от галванизирана стомана за градски парк.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-placeholder"></div>
+                <div class="project-info">
+                    <span class="project-cat" data-i18n="home.project.6.cat">Реклама</span>
+                    <h3 class="project-title" data-i18n="home.project.6.title">Светещи надписи</h3>
+                    <p class="project-desc" data-i18n="home.project.6.desc">LED светещи надписи и фасадна декорация за търговски обект в центъра на града.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- ══ FOOTER ══ -->
     <footer class="site-footer">
@@ -262,7 +295,7 @@
             <div class="footer-col">
                 <h4 class="footer-heading" data-i18n="footer.sitemap">Карта на сайта</h4>
                 <nav class="footer-nav">
-                    <a href="./index.html"  data-i18n="nav.services">Услуги</a>
+                    <a href="./index.html"  data-i18n="nav.home">Начало</a>
                     <a href="./about.html"  data-i18n="nav.about">За нас</a>
                     <a href="./contact.html" data-i18n="nav.contact">Контакти</a>
                 </nav>
