@@ -108,6 +108,26 @@
             </div>
         </div>
 
+        <!-- ══ SHOWCASE SLIDESHOW ══ -->
+        <div class="showcase-slider" id="showcaseSlider">
+            <div class="showcase-slide active">
+                <img src="assets/products/favorites/favorites-3.jpg" alt="PlasmaCraft showcase">
+            </div>
+            <div class="showcase-slide">
+                <img src="assets/products/favorites/favorites-1.jpg" alt="PlasmaCraft showcase">
+            </div>
+            <div class="showcase-slide">
+                <img src="assets/products/favorites/favorites-2.jpg" alt="PlasmaCraft showcase">
+            </div>
+            <button class="showcase-arrow showcase-arrow-prev" onclick="slidePrev()">&#8249;</button>
+            <button class="showcase-arrow showcase-arrow-next" onclick="slideNext()">&#8250;</button>
+            <div class="showcase-dots" id="showcaseDots">
+                <span class="showcase-dot active" onclick="goToSlide(0)"></span>
+                <span class="showcase-dot" onclick="goToSlide(1)"></span>
+                <span class="showcase-dot" onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+
         <div class="home-services-block">
             <p class="pointer-text">
                 <span class="line"></span>
@@ -220,7 +240,9 @@
         <div class="home-projects-grid">
 
             <div class="project-card">
-                <div class="project-img-placeholder"></div>
+                <div class="project-img-placeholder">
+                    <img src="assets/products/ready-projects/ready-project-4.jpg" alt="Декоративна ограда">
+                </div>
                 <div class="project-info">
                     <span class="project-cat" data-i18n="home.project.1.cat">Огради</span>
                     <h3 class="project-title" data-i18n="home.project.1.title">Декоративна ограда</h3>
@@ -229,7 +251,9 @@
             </div>
 
             <div class="project-card">
-                <div class="project-img-placeholder"></div>
+                <div class="project-img-placeholder">
+                    <img src="assets/products/ready-projects/ready-project-6.jpg" alt="Стъклени парапети">
+                </div>
                 <div class="project-info">
                     <span class="project-cat" data-i18n="home.project.2.cat">Парапети</span>
                     <h3 class="project-title" data-i18n="home.project.2.title">Стъклени парапети</h3>
@@ -238,38 +262,46 @@
             </div>
 
             <div class="project-card">
-                <div class="project-img-placeholder"></div>
+                <div class="project-img-placeholder">
+                    <img src="assets/products/ready-projects/ready-project-3.jpg" alt="Метален капак">
+                </div>
                 <div class="project-info">
-                    <span class="project-cat" data-i18n="home.project.3.cat">Автоматизация</span>
-                    <h3 class="project-title" data-i18n="home.project.3.title">Автоматизирана линия</h3>
-                    <p class="project-desc" data-i18n="home.project.3.desc">Специализирана автоматизирана производствена линия по технически проект на клиента.</p>
+                    <span class="project-cat" data-i18n="home.project.3.cat">Врати</span>
+                    <h3 class="project-title" data-i18n="home.project.3.title">Метален капак</h3>
+                    <p class="project-desc" data-i18n="home.project.3.desc">Метален капак за мазе с автоматично отваряне и здрава стоманена конструкция.</p>
                 </div>
             </div>
 
             <div class="project-card">
-                <div class="project-img-placeholder"></div>
+                <div class="project-img-placeholder">
+                    <img src="assets/products/ready-projects/ready-project-2.jpg" alt="Декоративна порта">
+                </div>
                 <div class="project-info">
                     <span class="project-cat" data-i18n="home.project.4.cat">Врати</span>
-                    <h3 class="project-title" data-i18n="home.project.4.title">Метални врати</h3>
-                    <p class="project-desc" data-i18n="home.project.4.desc">Комплект метални входни и гаражни врати с лазерна декорация за частен дом.</p>
+                    <h3 class="project-title" data-i18n="home.project.4.title">Декоративна порта</h3>
+                    <p class="project-desc" data-i18n="home.project.4.desc">Комбинирана порта от метал и дърво с лазерно изрязан мотив на дърво.</p>
                 </div>
             </div>
 
             <div class="project-card">
-                <div class="project-img-placeholder"></div>
+                <div class="project-img-placeholder">
+                    <img src="assets/products/ready-projects/ready-project-5.jpg" alt="Плазмена ограда">
+                </div>
                 <div class="project-info">
-                    <span class="project-cat" data-i18n="home.project.5.cat">Фитнес</span>
-                    <h3 class="project-title" data-i18n="home.project.5.title">Фитнес уреди</h3>
-                    <p class="project-desc" data-i18n="home.project.5.desc">Серия от открити фитнес уреди от галванизирана стомана за градски парк.</p>
+                    <span class="project-cat" data-i18n="home.project.5.cat">Огради</span>
+                    <h3 class="project-title" data-i18n="home.project.5.title">Плазмена ограда</h3>
+                    <p class="project-desc" data-i18n="home.project.5.desc">Декоративна ограда с плазмено изрязани листа и навес за частен имот.</p>
                 </div>
             </div>
 
             <div class="project-card">
-                <div class="project-img-placeholder"></div>
+                <div class="project-img-placeholder">
+                    <img src="assets/products/ready-projects/ready-project-1.jpg" alt="Дървена порта">
+                </div>
                 <div class="project-info">
-                    <span class="project-cat" data-i18n="home.project.6.cat">Реклама</span>
-                    <h3 class="project-title" data-i18n="home.project.6.title">Светещи надписи</h3>
-                    <p class="project-desc" data-i18n="home.project.6.desc">LED светещи надписи и фасадна декорация за търговски обект в центъра на града.</p>
+                    <span class="project-cat" data-i18n="home.project.6.cat">Огради</span>
+                    <h3 class="project-title" data-i18n="home.project.6.title">Дървена порта</h3>
+                    <p class="project-desc" data-i18n="home.project.6.desc">Порта с метална рамка и дървени пана за двор на частен дом.</p>
                 </div>
             </div>
 

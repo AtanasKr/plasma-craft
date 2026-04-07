@@ -135,6 +135,8 @@ const translations = {
         "doors.entrance.p2.desc": "Здрава ролетна входна врата от метал с висока сигурност, лесна поддръжка и дълготрайност.",
         "doors.entrance.p3.name": "Входна врата – Метал и Стъкло",
         "doors.entrance.p3.desc": "Комбинация от метална конструкция и стъклени вложки — елегантен модерен вид с максимална сигурност.",
+        "doors.entrance.p4.name": "Входна врата тип 4",
+        "doors.entrance.p4.desc": "Метална входна врата с индивидуален дизайн, изработена по поръчка.",
         "doors.entrance.laser": "Лазерно изрязани входни врати",
         "doors.entrance.laser.desc": "Входни врати с прецизно лазерно изрязани декоративни мотиви. Уникален дизайн по заявка на клиента, изработени от стомана с антикорозионно покритие.",
         "doors.entrance.shutter": "Ролетни входни врати",
@@ -187,6 +189,7 @@ const translations = {
         "fences.shutter.p3.desc": "Ролетна ограда с електрическо управление, подходяща за портали и паркинги.",
 
         "fitness.pageTitle": "ФИТНЕС МАШИНИ",
+        "coming_soon": "ОЧАКВАЙТЕ СКОРО",
         "fitness.title": "ФИТНЕС МАШИНИ",
         "fitness.tagline": "Нашите продукти",
         "fitness.gallery.label": "Галерия",
@@ -250,18 +253,18 @@ const translations = {
         "home.project.2.title": "Стъклени парапети",
         "home.project.2.cat": "Парапети",
         "home.project.2.desc": "Безрамкови стъклени парапети за тераса на офис сграда с метална носеща конструкция.",
-        "home.project.3.title": "Автоматизирана линия",
-        "home.project.3.cat": "Автоматизация",
-        "home.project.3.desc": "Специализирана автоматизирана производствена линия по технически проект на клиента.",
-        "home.project.4.title": "Метални врати",
+        "home.project.3.title": "Метален капак",
+        "home.project.3.cat": "Врати",
+        "home.project.3.desc": "Метален капак за мазе с автоматично отваряне и здрава стоманена конструкция.",
+        "home.project.4.title": "Декоративна порта",
         "home.project.4.cat": "Врати",
-        "home.project.4.desc": "Комплект метални входни и гаражни врати с лазерна декорация за частен дом.",
-        "home.project.5.title": "Фитнес уреди",
-        "home.project.5.cat": "Фитнес",
-        "home.project.5.desc": "Серия от открити фитнес уреди от галванизирана стомана за градски парк.",
-        "home.project.6.title": "Светещи надписи",
-        "home.project.6.cat": "Реклама",
-        "home.project.6.desc": "LED светещи надписи и фасадна декорация за търговски обект в центъра на града.",
+        "home.project.4.desc": "Комбинирана порта от метал и дърво с лазерно изрязан мотив на дърво.",
+        "home.project.5.title": "Плазмена ограда",
+        "home.project.5.cat": "Огради",
+        "home.project.5.desc": "Декоративна ограда с плазмено изрязани листа и навес за частен имот.",
+        "home.project.6.title": "Дървена порта",
+        "home.project.6.cat": "Огради",
+        "home.project.6.desc": "Порта с метална рамка и дървени пана за двор на частен дом.",
 
         "footer.follow": "Следвайте ни",
         "footer.contact": "Контакти",
@@ -411,6 +414,8 @@ const translations = {
         "doors.entrance.p2.desc": "Strong shutter entrance door made from metal with high security, easy maintenance and long durability.",
         "doors.entrance.p3.name": "Entrance Door – Metal and Glass",
         "doors.entrance.p3.desc": "Combination of metal structure and glass inserts — elegant modern look with maximum security.",
+        "doors.entrance.p4.name": "Entrance Door Type 4",
+        "doors.entrance.p4.desc": "Custom-made metal entrance door with individual design.",
         "doors.garage.title": "Garage Doors",
         "doors.garage.laser": "Laser Cut Garage Doors",
         "doors.garage.laser.desc": "Garage doors with decorative laser-cut elements. Manufactured to individual design.",
@@ -457,6 +462,7 @@ const translations = {
         "fences.shutter.p3.desc": "Shutter fence with electric operation, suitable for gates and parking areas.",
 
         "fitness.pageTitle": "FITNESS MACHINES",
+        "coming_soon": "COMING SOON",
         "fitness.title": "FITNESS MACHINES",
         "fitness.tagline": "Our products",
         "fitness.gallery.label": "Gallery",
@@ -520,18 +526,18 @@ const translations = {
         "home.project.2.title": "Glass Railings",
         "home.project.2.cat": "Railings",
         "home.project.2.desc": "Frameless glass railings for an office terrace with a metal supporting structure.",
-        "home.project.3.title": "Automated Line",
-        "home.project.3.cat": "Automation",
-        "home.project.3.desc": "Specialized automated production line built to the client's technical specifications.",
-        "home.project.4.title": "Metal Doors",
+        "home.project.3.title": "Metal Hatch",
+        "home.project.3.cat": "Doors",
+        "home.project.3.desc": "Metal cellar hatch with automatic opening and sturdy steel construction.",
+        "home.project.4.title": "Decorative Gate",
         "home.project.4.cat": "Doors",
-        "home.project.4.desc": "Set of metal entrance and garage doors with laser decoration for a private residence.",
-        "home.project.5.title": "Fitness Equipment",
-        "home.project.5.cat": "Fitness",
-        "home.project.5.desc": "Series of outdoor fitness equipment made from galvanized steel for a city park.",
-        "home.project.6.title": "Illuminated Signs",
-        "home.project.6.cat": "Commercial",
-        "home.project.6.desc": "LED illuminated signs and facade decoration for a commercial property in the city centre.",
+        "home.project.4.desc": "Combined metal and wood gate with laser-cut tree motif design.",
+        "home.project.5.title": "Plasma-Cut Fence",
+        "home.project.5.cat": "Fences",
+        "home.project.5.desc": "Decorative fence with plasma-cut leaf pattern and canopy for a private property.",
+        "home.project.6.title": "Wooden Gate",
+        "home.project.6.cat": "Fences",
+        "home.project.6.desc": "Gate with metal frame and wooden panels for a private home yard.",
 
         "footer.follow": "Follow Us",
         "footer.contact": "Contact Info",
@@ -644,6 +650,34 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
     });
 });
+
+/* ════════════════════════════
+   SHOWCASE SLIDER
+════════════════════════════ */
+(function () {
+    const slider = document.getElementById('showcaseSlider');
+    if (!slider) return;
+    const slides = slider.querySelectorAll('.showcase-slide');
+    const dots = slider.querySelectorAll('.showcase-dot');
+    let current = 0;
+    let timer;
+
+    function go(i) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (i + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+    }
+
+    function auto() { timer = setInterval(() => go(current + 1), 5000); }
+
+    window.goToSlide = function (i) { clearInterval(timer); go(i); auto(); };
+    window.slideNext = function () { clearInterval(timer); go(current + 1); auto(); };
+    window.slidePrev = function () { clearInterval(timer); go(current - 1); auto(); };
+
+    auto();
+})();
 
 /* ════════════════════════════
    PRODUCT MODAL
