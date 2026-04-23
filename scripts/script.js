@@ -66,13 +66,27 @@ const translations = {
         "contact.phone.office": "Офис",
         "contact.email.label": "Имейл",
         "contact.address.label": "Адрес",
-        "contact.address.value": "ул. Примерна 1, гр. София, 1000",
+        "contact.address.value": "с. Говедаре, България",
         "contact.hours.label": "Работно време",
         "contact.hours.weekdays": "Понеделник – Петък: 08:00 – 17:00",
         "contact.hours.saturday": "Събота: 09:00 – 13:00",
         "contact.hours.sunday": "Неделя: Почивен ден",
         "contact.social.label": "Социални мрежи",
         "contact.map.label": "Намерете ни",
+        "contact.form.label": "Изпратете ни съобщение",
+        "contact.form.intro": "Попълнете формата и ще се свържем с вас при първа възможност.",
+        "contact.form.name": "Име",
+        "contact.form.name.placeholder": "Вашето име",
+        "contact.form.email": "Имейл",
+        "contact.form.email.placeholder": "you@example.com",
+        "contact.form.message": "Съобщение",
+        "contact.form.message.placeholder": "Кажете ни с какво можем да помогнем...",
+        "contact.form.send": "Изпрати съобщение",
+        "contact.form.required": "Моля, попълнете всички полета.",
+        "contact.form.invalid_email": "Моля, въведете валиден имейл адрес.",
+        "contact.form.sending": "Изпращане...",
+        "contact.form.sent": "Съобщението е изпратено. Благодарим ви!",
+        "contact.form.error": "Възникна грешка. Моля, опитайте отново по-късно.",
 
         "about.sidebar.mvg": "Мисия, Визия, Цели",
         "about.sidebar.history": "История",
@@ -84,6 +98,7 @@ const translations = {
         "contact.sidebar.address": "Адрес",
         "contact.sidebar.hours": "Работно Време",
         "contact.sidebar.social": "Социални мрежи",
+        "contact.sidebar.form": "Съобщение",
         "contact.sidebar.map": "Карта",
 
         "nav.products": "Продукти",
@@ -339,13 +354,27 @@ const translations = {
         "contact.phone.office": "Office",
         "contact.email.label": "Email",
         "contact.address.label": "Address",
-        "contact.address.value": "1 Example St., Sofia, 1000",
+        "contact.address.value": "Govedare village, Bulgaria",
         "contact.hours.label": "Working Hours",
         "contact.hours.weekdays": "Monday – Friday: 08:00 – 17:00",
         "contact.hours.saturday": "Saturday: 09:00 – 13:00",
         "contact.hours.sunday": "Sunday: Closed",
         "contact.social.label": "Social Media",
         "contact.map.label": "Find Us",
+        "contact.form.label": "Send Us a Message",
+        "contact.form.intro": "Fill in the form and we'll get back to you as soon as possible.",
+        "contact.form.name": "Name",
+        "contact.form.name.placeholder": "Your name",
+        "contact.form.email": "Email",
+        "contact.form.email.placeholder": "you@example.com",
+        "contact.form.message": "Message",
+        "contact.form.message.placeholder": "Tell us how we can help...",
+        "contact.form.send": "Send Message",
+        "contact.form.required": "Please fill in all fields.",
+        "contact.form.invalid_email": "Please enter a valid email address.",
+        "contact.form.sending": "Sending...",
+        "contact.form.sent": "Your message has been sent. Thank you!",
+        "contact.form.error": "Something went wrong. Please try again later.",
 
         "about.sidebar.mvg": "Mission, Vision & Goals",
         "about.sidebar.history": "History",
@@ -357,6 +386,7 @@ const translations = {
         "contact.sidebar.address": "Address",
         "contact.sidebar.hours": "Working Hours",
         "contact.sidebar.social": "Social Media",
+        "contact.sidebar.form": "Message",
         "contact.sidebar.map": "Map",
 
         "nav.products": "Products",
@@ -768,4 +798,65 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeModal();
     if (e.key === 'ArrowLeft')  galleryPrev();
     if (e.key === 'ArrowRight') galleryNext();
+});
+
+/* ════════════════════════════
+   CONTACT FORM (Web3Forms)
+════════════════════════════ */
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+    const statusEl = document.getElementById('contactFormStatus');
+    const submitBtn = form.querySelector('.form-submit');
+
+    form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const lang = localStorage.getItem('lang') || 'bg';
+        const t = key => translations[lang]?.[key] || translations.bg[key] || '';
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        statusEl.classList.remove('error', 'success');
+
+        if (!name || !email || !message) {
+            statusEl.textContent = t('contact.form.required');
+            statusEl.classList.add('error');
+            return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            statusEl.textContent = t('contact.form.invalid_email');
+            statusEl.classList.add('error');
+            return;
+        }
+
+        const originalLabel = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = t('contact.form.sending');
+        statusEl.textContent = '';
+
+        try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(form)
+            });
+            const data = await res.json();
+            if (data.success) {
+                form.reset();
+                statusEl.textContent = t('contact.form.sent');
+                statusEl.classList.add('success');
+            } else {
+                statusEl.textContent = t('contact.form.error');
+                statusEl.classList.add('error');
+            }
+        } catch {
+            statusEl.textContent = t('contact.form.error');
+            statusEl.classList.add('error');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel;
+        }
+    });
 });

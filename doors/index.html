@@ -14,8 +14,8 @@
             document.documentElement.setAttribute('lang', lang);
         })();
     </script>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/products.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/products.css">
 </head>
 
 <body>
@@ -30,25 +30,25 @@
         </div>
 
         <div class="nav-left">
-            <a class="nav-pill" href="./index.html" data-i18n="nav.home">Начало</a>
+            <a class="nav-pill" href="../" data-i18n="nav.home">Начало</a>
             <div class="nav-dropdown">
                 <span class="nav-pill dropdown-trigger active" data-i18n="nav.products">Продукти</span>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="./railings.html" data-i18n="products.railings">Парапети</a>
-                    <a class="dropdown-item active" href="./doors.html" data-i18n="products.doors">Врати</a>
-                    <a class="dropdown-item" href="./fences.html"   data-i18n="products.fences">Огради</a>
-                    <a class="dropdown-item" href="./fitness.html"  data-i18n="products.fitness">Фитнес машини</a>
-                    <a class="dropdown-item" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
-                    <a class="dropdown-item" href="./other.html"    data-i18n="products.other">Други продукти</a>
+                    <a class="dropdown-item" href="../railings/" data-i18n="products.railings">Парапети</a>
+                    <a class="dropdown-item active" href="../doors/" data-i18n="products.doors">Врати</a>
+                    <a class="dropdown-item" href="../fences/"   data-i18n="products.fences">Огради</a>
+                    <a class="dropdown-item" href="../fitness/"  data-i18n="products.fitness">Фитнес машини</a>
+                    <a class="dropdown-item" href="../automation/" data-i18n="products.automation">Автоматизационни машини</a>
+                    <a class="dropdown-item" href="../other/"    data-i18n="products.other">Други продукти</a>
                 </div>
             </div>
         </div>
 
-        <img src="assets/logo.png" alt="PlasmaCraft BG logo">
+        <img src="../assets/logo.png" alt="PlasmaCraft BG logo">
 
         <div class="nav-right">
-            <a class="nav-pill" href="./about.html"   data-i18n="nav.about">За нас</a>
-            <a class="nav-pill" href="./contact.html" data-i18n="nav.contact">Контакти</a>
+            <a class="nav-pill" href="../about/"   data-i18n="nav.about">За нас</a>
+            <a class="nav-pill" href="../contact/" data-i18n="nav.contact">Контакти</a>
         </div>
 
         <div class="nav-side nav-side-right">
@@ -62,20 +62,20 @@
 
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a class="nav-pill" href="./index.html" data-i18n="nav.home">Начало</a>
+        <a class="nav-pill" href="../" data-i18n="nav.home">Начало</a>
         <div class="mobile-products-group">
             <div class="mobile-products-label" data-i18n="nav.products">Продукти</div>
             <div class="mobile-products-links">
-                <a class="nav-pill-sm" href="./railings.html"   data-i18n="products.railings">Парапети</a>
-                <a class="nav-pill-sm active" href="./doors.html" data-i18n="products.doors">Врати</a>
-                <a class="nav-pill-sm" href="./fences.html"     data-i18n="products.fences">Огради</a>
-                <a class="nav-pill-sm" href="./fitness.html"    data-i18n="products.fitness">Фитнес машини</a>
-                <a class="nav-pill-sm" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
-                <a class="nav-pill-sm" href="./other.html"      data-i18n="products.other">Други продукти</a>
+                <a class="nav-pill-sm" href="../railings/"   data-i18n="products.railings">Парапети</a>
+                <a class="nav-pill-sm active" href="../doors/" data-i18n="products.doors">Врати</a>
+                <a class="nav-pill-sm" href="../fences/"     data-i18n="products.fences">Огради</a>
+                <a class="nav-pill-sm" href="../fitness/"    data-i18n="products.fitness">Фитнес машини</a>
+                <a class="nav-pill-sm" href="../automation/" data-i18n="products.automation">Автоматизационни машини</a>
+                <a class="nav-pill-sm" href="../other/"      data-i18n="products.other">Други продукти</a>
             </div>
         </div>
-        <a class="nav-pill" href="./about.html"   data-i18n="nav.about">За нас</a>
-        <a class="nav-pill" href="./contact.html" data-i18n="nav.contact">Контакти</a>
+        <a class="nav-pill" href="../about/"   data-i18n="nav.about">За нас</a>
+        <a class="nav-pill" href="../contact/" data-i18n="nav.contact">Контакти</a>
         <div class="mobile-menu-controls">
             <div class="lang-switch">
                 <span data-lang="bg" onclick="setLang('bg')">BG</span>
@@ -111,9 +111,9 @@
                          onclick="openProductModal(this)"
                          data-key-title="doors.entrance.p1.name"
                          data-key-desc="doors.entrance.p1.desc"
-                         data-images="assets/products/doors/door-1.jpg">
+                         data-images="../assets/products/doors/door-1.jpg">
                         <div class="product-card-img">
-                            <img src="assets/products/doors/door-1.jpg" alt="Входна врата тип 1">
+                            <img src="../assets/products/doors/door-1.jpg" alt="Входна врата тип 1">
                         </div>
                         <p class="product-card-name" data-i18n="doors.entrance.p1.name">Входна врата тип 1</p>
                     </div>
@@ -121,9 +121,9 @@
                          onclick="openProductModal(this)"
                          data-key-title="doors.entrance.p2.name"
                          data-key-desc="doors.entrance.p2.desc"
-                         data-images="assets/products/doors/door-2.jpg">
+                         data-images="../assets/products/doors/door-2.jpg">
                         <div class="product-card-img">
-                            <img src="assets/products/doors/door-2.jpg" alt="Входна врата тип 2">
+                            <img src="../assets/products/doors/door-2.jpg" alt="Входна врата тип 2">
                         </div>
                         <p class="product-card-name" data-i18n="doors.entrance.p2.name">Входна врата тип 2</p>
                     </div>
@@ -131,9 +131,9 @@
                          onclick="openProductModal(this)"
                          data-key-title="doors.entrance.p3.name"
                          data-key-desc="doors.entrance.p3.desc"
-                         data-images="assets/products/doors/door-3.jpg,assets/products/doors/door-4.jpg">
+                         data-images="../assets/products/doors/door-3.jpg,../assets/products/doors/door-4.jpg">
                         <div class="product-card-img">
-                            <img src="assets/products/doors/door-3.jpg" alt="Входна врата тип 3">
+                            <img src="../assets/products/doors/door-3.jpg" alt="Входна врата тип 3">
                         </div>
                         <p class="product-card-name" data-i18n="doors.entrance.p3.name">Входна врата тип 3</p>
                     </div>
@@ -141,9 +141,9 @@
                          onclick="openProductModal(this)"
                          data-key-title="doors.entrance.p4.name"
                          data-key-desc="doors.entrance.p4.desc"
-                         data-images="assets/products/doors/door-5.jpg">
+                         data-images="../assets/products/doors/door-5.jpg">
                         <div class="product-card-img">
-                            <img src="assets/products/doors/door-5.jpg" alt="Входна врата тип 4">
+                            <img src="../assets/products/doors/door-5.jpg" alt="Входна врата тип 4">
                         </div>
                         <p class="product-card-name" data-i18n="doors.entrance.p4.name">Входна врата тип 4</p>
                     </div>
@@ -158,9 +158,9 @@
                          onclick="openProductModal(this)"
                          data-key-title="doors.garage.p1.name"
                          data-key-desc="doors.garage.p1.desc"
-                         data-images="assets/products/garage-doors/garage-doors-1.jpg">
+                         data-images="../assets/products/garage-doors/garage-doors-1.jpg">
                         <div class="product-card-img">
-                            <img src="assets/products/garage-doors/garage-doors-1.jpg" alt="Гаражна врата тип 1">
+                            <img src="../assets/products/garage-doors/garage-doors-1.jpg" alt="Гаражна врата тип 1">
                         </div>
                         <p class="product-card-name" data-i18n="doors.garage.p1.name">Гаражна врата тип 1</p>
                     </div>
@@ -168,9 +168,9 @@
                          onclick="openProductModal(this)"
                          data-key-title="doors.garage.p2.name"
                          data-key-desc="doors.garage.p2.desc"
-                         data-images="assets/products/garage-doors/garage-doors-2.jpg">
+                         data-images="../assets/products/garage-doors/garage-doors-2.jpg">
                         <div class="product-card-img">
-                            <img src="assets/products/garage-doors/garage-doors-2.jpg" alt="Гаражна врата тип 2">
+                            <img src="../assets/products/garage-doors/garage-doors-2.jpg" alt="Гаражна врата тип 2">
                         </div>
                         <p class="product-card-name" data-i18n="doors.garage.p2.name">Гаражна врата тип 2</p>
                     </div>
@@ -205,22 +205,22 @@
             <div class="footer-col">
                 <h4 class="footer-heading" data-i18n="footer.follow">Следвайте ни</h4>
                 <div class="footer-social">
-                    <a href="#" class="social-link" aria-label="Facebook">f</a>
-                    <a href="#" class="social-link" aria-label="Instagram">ig</a>
-                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                    <a href="https://www.facebook.com/PlasmaCraftBG" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">f</a>
+                    <a href="https://www.instagram.com/plasmacraftbg/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">ig</a>
                 </div>
             </div>
             <div class="footer-col">
                 <h4 class="footer-heading" data-i18n="footer.contact">Контакти</h4>
-                <p class="footer-text"><a href="tel:+35900000000">+359 00 000 0000</a></p>
-                <p class="footer-text" data-i18n="contact.address.value">ул. Примерна 1, гр. София, 1000</p>
+                <p class="footer-text"><a href="tel:+359876533806">+359 876 533 806</a></p>
+                <p class="footer-text"><a href="mailto:plasmacraft2025@gmail.com">plasmacraft2025@gmail.com</a></p>
+                <p class="footer-text" data-i18n="contact.address.value">с. Говедаре, България</p>
             </div>
             <div class="footer-col">
                 <h4 class="footer-heading" data-i18n="footer.sitemap">Карта на сайта</h4>
                 <nav class="footer-nav">
-                    <a href="./index.html"  data-i18n="nav.home">Начало</a>
-                    <a href="./about.html"  data-i18n="nav.about">За нас</a>
-                    <a href="./contact.html" data-i18n="nav.contact">Контакти</a>
+                    <a href="../"  data-i18n="nav.home">Начало</a>
+                    <a href="../about/"  data-i18n="nav.about">За нас</a>
+                    <a href="../contact/" data-i18n="nav.contact">Контакти</a>
                 </nav>
             </div>
         </div>
@@ -229,7 +229,7 @@
         </div>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 
 </html>

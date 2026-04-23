@@ -14,8 +14,8 @@
             document.documentElement.setAttribute('lang', lang);
         })();
     </script>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/contact.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/contact.css">
 </head>
 
 <body>
@@ -30,25 +30,25 @@
         </div>
 
         <div class="nav-left">
-            <a class="nav-pill" href="./index.html" data-i18n="nav.home">Начало</a>
+            <a class="nav-pill" href="../" data-i18n="nav.home">Начало</a>
             <div class="nav-dropdown">
                 <span class="nav-pill dropdown-trigger" data-i18n="nav.products">Продукти</span>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="./railings.html" data-i18n="products.railings">Парапети</a>
-                    <a class="dropdown-item" href="./doors.html"    data-i18n="products.doors">Врати</a>
-                    <a class="dropdown-item" href="./fences.html"   data-i18n="products.fences">Огради</a>
-                    <a class="dropdown-item" href="./fitness.html"  data-i18n="products.fitness">Фитнес машини</a>
-                    <a class="dropdown-item" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
-                    <a class="dropdown-item" href="./other.html"    data-i18n="products.other">Други продукти</a>
+                    <a class="dropdown-item" href="../railings/" data-i18n="products.railings">Парапети</a>
+                    <a class="dropdown-item" href="../doors/"    data-i18n="products.doors">Врати</a>
+                    <a class="dropdown-item" href="../fences/"   data-i18n="products.fences">Огради</a>
+                    <a class="dropdown-item" href="../fitness/"  data-i18n="products.fitness">Фитнес машини</a>
+                    <a class="dropdown-item" href="../automation/" data-i18n="products.automation">Автоматизационни машини</a>
+                    <a class="dropdown-item" href="../other/"    data-i18n="products.other">Други продукти</a>
                 </div>
             </div>
         </div>
 
-        <img src="assets/logo.png" alt="PlasmaCraft BG logo">
+        <img src="../assets/logo.png" alt="PlasmaCraft BG logo">
 
         <div class="nav-right">
-            <a class="nav-pill" href="./about.html" data-i18n="nav.about">За нас</a>
-            <a class="nav-pill active" href="./contact.html" data-i18n="nav.contact">Контакти</a>
+            <a class="nav-pill" href="../about/" data-i18n="nav.about">За нас</a>
+            <a class="nav-pill active" href="../contact/" data-i18n="nav.contact">Контакти</a>
         </div>
 
         <div class="nav-side nav-side-right">
@@ -62,20 +62,20 @@
 
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a class="nav-pill" href="./index.html" data-i18n="nav.home">Начало</a>
+        <a class="nav-pill" href="../" data-i18n="nav.home">Начало</a>
         <div class="mobile-products-group">
             <div class="mobile-products-label" data-i18n="nav.products">Продукти</div>
             <div class="mobile-products-links">
-                <a class="nav-pill-sm" href="./railings.html"   data-i18n="products.railings">Парапети</a>
-                <a class="nav-pill-sm" href="./doors.html"      data-i18n="products.doors">Врати</a>
-                <a class="nav-pill-sm" href="./fences.html"     data-i18n="products.fences">Огради</a>
-                <a class="nav-pill-sm" href="./fitness.html"    data-i18n="products.fitness">Фитнес машини</a>
-                <a class="nav-pill-sm" href="./automation.html" data-i18n="products.automation">Автоматизационни машини</a>
-                <a class="nav-pill-sm" href="./other.html"      data-i18n="products.other">Други продукти</a>
+                <a class="nav-pill-sm" href="../railings/"   data-i18n="products.railings">Парапети</a>
+                <a class="nav-pill-sm" href="../doors/"      data-i18n="products.doors">Врати</a>
+                <a class="nav-pill-sm" href="../fences/"     data-i18n="products.fences">Огради</a>
+                <a class="nav-pill-sm" href="../fitness/"    data-i18n="products.fitness">Фитнес машини</a>
+                <a class="nav-pill-sm" href="../automation/" data-i18n="products.automation">Автоматизационни машини</a>
+                <a class="nav-pill-sm" href="../other/"      data-i18n="products.other">Други продукти</a>
             </div>
         </div>
-        <a class="nav-pill" href="./about.html" data-i18n="nav.about">За нас</a>
-        <a class="nav-pill active" href="./contact.html" data-i18n="nav.contact">Контакти</a>
+        <a class="nav-pill" href="../about/" data-i18n="nav.about">За нас</a>
+        <a class="nav-pill active" href="../contact/" data-i18n="nav.contact">Контакти</a>
         <div class="mobile-menu-controls">
             <div class="lang-switch">
                 <span data-lang="bg" onclick="setLang('bg')">BG</span>
@@ -97,6 +97,7 @@
                 <a href="#address" class="sidebar-link" data-i18n="contact.sidebar.address">Адрес</a>
                 <a href="#hours"   class="sidebar-link" data-i18n="contact.sidebar.hours">Работно Време</a>
                 <a href="#social"  class="sidebar-link" data-i18n="contact.sidebar.social">Социални мрежи</a>
+                <a href="#form"    class="sidebar-link" data-i18n="contact.sidebar.form">Съобщение</a>
                 <a href="#map"     class="sidebar-link" data-i18n="contact.sidebar.map">Карта</a>
             </nav>
         </aside>
@@ -118,12 +119,7 @@
                 <h2 class="contact-section-title" data-i18n="contact.phone.label">Телефон</h2>
                 <div class="contact-entries">
                     <div class="contact-entry">
-                        <span class="entry-role" data-i18n="contact.phone.engineer">Инженер</span>
-                        <a class="entry-value" href="tel:+35900000001">+359 00 000 0001</a>
-                    </div>
-                    <div class="contact-entry">
-                        <span class="entry-role" data-i18n="contact.phone.office">Офис</span>
-                        <a class="entry-value" href="tel:+35900000002">+359 00 000 0002</a>
+                        <a class="entry-value" href="tel:+359876533806">+359 876 533 806</a>
                     </div>
                 </div>
             </section>
@@ -133,7 +129,7 @@
                 <h2 class="contact-section-title" data-i18n="contact.email.label">Имейл</h2>
                 <div class="contact-entries">
                     <div class="contact-entry">
-                        <a class="entry-value" href="mailto:info@plasmacraft.bg">info@plasmacraft.bg</a>
+                        <a class="entry-value" href="mailto:plasmacraft2025@gmail.com">plasmacraft2025@gmail.com</a>
                     </div>
                 </div>
             </section>
@@ -143,7 +139,7 @@
                 <h2 class="contact-section-title" data-i18n="contact.address.label">Адрес</h2>
                 <div class="contact-entries">
                     <div class="contact-entry">
-                        <span class="entry-value" data-i18n="contact.address.value">ул. Примерна 1, гр. София, 1000</span>
+                        <span class="entry-value" data-i18n="contact.address.value">с. Говедаре, България</span>
                     </div>
                 </div>
             </section>
@@ -162,10 +158,44 @@
             <section id="social" class="contact-section">
                 <h2 class="contact-section-title" data-i18n="contact.social.label">Социални мрежи</h2>
                 <div class="social-row">
-                    <a href="#" class="social-link" aria-label="Facebook">f</a>
-                    <a href="#" class="social-link" aria-label="Instagram">ig</a>
-                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                    <a href="https://www.facebook.com/PlasmaCraftBG" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">f</a>
+                    <a href="https://www.instagram.com/plasmacraftbg/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">ig</a>
                 </div>
+            </section>
+
+            <!-- Contact form -->
+            <section id="form" class="contact-section">
+                <h2 class="contact-section-title" data-i18n="contact.form.label">Изпратете ни съобщение</h2>
+                <p class="contact-form-intro" data-i18n="contact.form.intro">Попълнете формата и ще се свържем с вас при първа възможност.</p>
+                <form class="contact-form" id="contactForm" novalidate>
+                    <!-- Get your free access key at https://web3forms.com -->
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                    <input type="hidden" name="subject" value="PlasmaCraft BG — ново съобщение">
+                    <input type="hidden" name="from_name" value="PlasmaCraft BG">
+                    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+                    <div class="form-row">
+                        <label class="form-field">
+                            <span class="form-label" data-i18n="contact.form.name">Име</span>
+                            <input type="text" name="name" required autocomplete="name"
+                                   data-i18n-placeholder="contact.form.name.placeholder"
+                                   placeholder="Вашето име">
+                        </label>
+                        <label class="form-field">
+                            <span class="form-label" data-i18n="contact.form.email">Имейл</span>
+                            <input type="email" name="email" required autocomplete="email"
+                                   data-i18n-placeholder="contact.form.email.placeholder"
+                                   placeholder="you@example.com">
+                        </label>
+                    </div>
+                    <label class="form-field">
+                        <span class="form-label" data-i18n="contact.form.message">Съобщение</span>
+                        <textarea name="message" rows="5" required
+                                  data-i18n-placeholder="contact.form.message.placeholder"
+                                  placeholder="Кажете ни с какво можем да помогнем..."></textarea>
+                    </label>
+                    <button type="submit" class="form-submit" data-i18n="contact.form.send">Изпрати съобщение</button>
+                    <p class="form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+                </form>
             </section>
 
             <!-- Map -->
@@ -173,14 +203,14 @@
                 <h2 class="contact-section-title" data-i18n="contact.map.label">Намерете ни</h2>
                 <div class="map-container">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93760.93398742977!2d23.23810498955078!3d42.69774100000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8682cb317bf5%3A0x400a01269bf5e60!2sSofia%2C%20Bulgaria!5e0!3m2!1sen!2sbg!4v1700000000000!5m2!1sen!2sbg"
+                        src="https://maps.google.com/maps?q=%D1%81.%20%D0%93%D0%BE%D0%B2%D0%B5%D0%B4%D0%B0%D1%80%D0%B5%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F&t=&z=14&ie=UTF8&iwloc=&output=embed"
                         width="100%"
                         height="100%"
                         style="border:0;"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="Map – Sofia, Bulgaria">
+                        title="Map – с. Говедаре, България">
                     </iframe>
                 </div>
             </section>
@@ -194,22 +224,22 @@
             <div class="footer-col">
                 <h4 class="footer-heading" data-i18n="footer.follow">Следвайте ни</h4>
                 <div class="footer-social">
-                    <a href="#" class="social-link" aria-label="Facebook">f</a>
-                    <a href="#" class="social-link" aria-label="Instagram">ig</a>
-                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                    <a href="https://www.facebook.com/PlasmaCraftBG" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">f</a>
+                    <a href="https://www.instagram.com/plasmacraftbg/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">ig</a>
                 </div>
             </div>
             <div class="footer-col">
                 <h4 class="footer-heading" data-i18n="footer.contact">Контакти</h4>
-                <p class="footer-text"><a href="tel:+35900000000">+359 00 000 0000</a></p>
-                <p class="footer-text" data-i18n="contact.address.value">ул. Примерна 1, гр. София, 1000</p>
+                <p class="footer-text"><a href="tel:+359876533806">+359 876 533 806</a></p>
+                <p class="footer-text"><a href="mailto:plasmacraft2025@gmail.com">plasmacraft2025@gmail.com</a></p>
+                <p class="footer-text" data-i18n="contact.address.value">с. Говедаре, България</p>
             </div>
             <div class="footer-col">
                 <h4 class="footer-heading" data-i18n="footer.sitemap">Карта на сайта</h4>
                 <nav class="footer-nav">
-                    <a href="./index.html" data-i18n="nav.home">Начало</a>
-                    <a href="./about.html" data-i18n="nav.about">За нас</a>
-                    <a href="./contact.html" data-i18n="nav.contact">Контакти</a>
+                    <a href="../" data-i18n="nav.home">Начало</a>
+                    <a href="../about/" data-i18n="nav.about">За нас</a>
+                    <a href="../contact/" data-i18n="nav.contact">Контакти</a>
                 </nav>
             </div>
         </div>
@@ -218,7 +248,7 @@
         </div>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 
 </html>
